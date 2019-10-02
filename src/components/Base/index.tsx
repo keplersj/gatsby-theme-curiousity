@@ -16,24 +16,7 @@ const BaseLayout = (
       site {
         siteMetadata {
           title
-          description
           siteUrl
-          twitterUsername
-          instagramUsername
-          linkedinUsername
-          githubUsername
-        }
-      }
-      file(
-        relativePath: { eq: "avatar.jpg" }
-        sourceInstanceName: { eq: "images" }
-      ) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 480, height: 480) {
-            ...GatsbyImageSharpFixed
-          }
         }
       }
     }
@@ -46,13 +29,10 @@ const BaseLayout = (
         defaultTitle={data.site.siteMetadata.title}
       >
         <html lang="en" />
-        <meta name="author" content="Kepler Sticka-Jones" />
-        props.title && <title>{props.title}</title>
-        <meta
-          name="description"
-          content={props.description || data.site.siteMetadata.description}
-        />
-        <meta name="theme-color" content="#409040" />
+        {props.title && <title>{props.title}</title>}
+        {props.description && (
+          <meta name="description" content={props.description} />
+        )}
         <meta
           property="og:title"
           content={
@@ -61,29 +41,10 @@ const BaseLayout = (
             data.site.siteMetadata.title
           }
         />
-        <meta property="og:type" content="website" />
         <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
-        <meta
-          property="og:image"
-          content={data.file.childImageSharp.fixed.base64}
-        />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="480" />
-        <meta property="og:image:height" content="480" />
-        <meta
-          property="og:description"
-          content={props.description || data.site.siteMetadata.description}
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:site"
-          content={"@" + data.site.siteMetadata.twitterUsername}
-        />
-        <meta
-          name="twitter:creator"
-          content={"@" + data.site.siteMetadata.twitterUsername}
-        />
-        <meta name="msvalidate.01" content="E5D802A305BE2DD99EB4484A4B1DD90E" />
+        {props.description && (
+          <meta property="og:description" content={props.description} />
+        )}
       </Helmet>
 
       <Global

@@ -1,7 +1,9 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import { Global, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
+
+import "modern-normalize";
+import "starstuff-style";
 
 interface Props {
   title?: string;
@@ -23,7 +25,7 @@ const BaseLayout = (
   `);
 
   return (
-    <>
+    <main>
       <Helmet
         titleTemplate={`%s | ${data.site.siteMetadata.title}`}
         defaultTitle={data.site.siteMetadata.title}
@@ -47,88 +49,8 @@ const BaseLayout = (
         )}
       </Helmet>
 
-      <Global
-        styles={css`
-          html {
-            background-color: #fff;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            min-width: 300px;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            text-rendering: optimizeLegibility;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-          }
-          *,
-          ::after,
-          ::before {
-            box-sizing: inherit;
-          }
-          blockquote,
-          body,
-          dd,
-          dl,
-          dt,
-          fieldset,
-          figure,
-          h1,
-          h2,
-          h3,
-          h4,
-          h5,
-          h6,
-          hr,
-          html,
-          iframe,
-          legend,
-          /* li, */
-          /* ul, */
-          ol,
-          /* p, */
-          /* pre, */
-          textarea {
-            margin: 0;
-            padding: 0;
-          }
-          body,
-          button,
-          input,
-          select,
-          textarea {
-            font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
-              Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-              Helvetica, Arial, sans-serif;
-          }
-          body {
-            color: #4a4a4a;
-            font-size: 1em;
-            font-weight: 400;
-            line-height: 1.5;
-          }
-          a {
-            color: #4a4a4a;
-          }
-          @media (prefers-color-scheme: dark) {
-            html,
-            body {
-              background-color: #4a4a4a;
-              color: white;
-            }
-            a {
-              color: white;
-            }
-            /* For some reason Atom One Dark is setting this element to black, manual override. */
-            span.mtk1 {
-              color: white !important;
-            }
-          }
-        `}
-      />
-
-      <main>{props.children}</main>
-    </>
+      {props.children}
+    </main>
   );
 };
 

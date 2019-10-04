@@ -1,6 +1,6 @@
 module.exports = options => ({
   plugins: [
-    "gatsby-plugin-mdx",
+    Boolean(options.mdx) && options.mdx && "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -20,5 +20,5 @@ module.exports = options => ({
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-typescript"
-  ]
+  ].filter(Boolean)
 });

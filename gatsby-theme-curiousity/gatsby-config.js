@@ -2,7 +2,7 @@ const withDefaults = require("./utils/default-options");
 
 module.exports = themeOptions => {
   const options = withDefaults(themeOptions);
-  const { mdx = true } = themeOptions;
+  const { remark = true } = themeOptions;
 
   return {
     siteMetadata: {
@@ -10,12 +10,7 @@ module.exports = themeOptions => {
       description: "This is a portfolio built using gatsby-theme-curiousity"
     },
     plugins: [
-      mdx && {
-        resolve: "gatsby-plugin-mdx",
-        options: {
-          extensions: [".mdx", ".md"]
-        }
-      },
+      remark && "gatsby-transformer-remark",
       {
         resolve: "gatsby-source-filesystem",
         options: {

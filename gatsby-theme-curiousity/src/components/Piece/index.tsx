@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import BaseLayout from "../Base";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { graphql } from "gatsby";
 
 const Content = styled.div`
   max-width: 55em;
@@ -19,7 +19,7 @@ interface Props {
     portfolioItem: {
       id: string;
       excerpt: string;
-      body: any;
+      html: string;
       slug: string;
       title: string;
       tags: string[];
@@ -34,12 +34,21 @@ const ProjectPageTemplate = ({
   <BaseLayout title={piece.title} description={piece.excerpt}>
     <Content>
       <h1>{piece.title}</h1>
-      {/* <br /> */}
-      <section>
-        <MDXRenderer>{piece.body}</MDXRenderer>
-      </section>
+      <section dangerouslySetInnerHTML={{ __html: piece.html }} />
     </Content>
   </BaseLayout>
 );
 
 export default ProjectPageTemplate;
+
+export const fragment = graphql`
+  fragment CuriousityPiecePage on PortfolioItem {
+    id
+    excerpt
+    html
+    slug
+    title
+    tags
+    keywords
+  }
+`;

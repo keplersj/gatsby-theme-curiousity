@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import BaseLayout from "../Base";
 import { PortfolioListItem as Project } from "../PortfolioListItem";
+import { graphql } from "gatsby";
 
 const Projects = styled.div`
   margin-left: 2em;
@@ -51,3 +52,12 @@ const ProjectsPage = ({ data }: Props): React.ReactElement<Props> => (
 );
 
 export default ProjectsPage;
+
+export const fragment = graphql`
+  fragment CuriousityPortfolio on PortfolioItem {
+    id
+    excerpt
+    slug
+    title
+  }
+`;

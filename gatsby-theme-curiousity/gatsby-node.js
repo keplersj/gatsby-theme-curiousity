@@ -24,18 +24,18 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
   });
 };
 
-const mdxResolverPassthrough = fieldName => async (
+const remarkResolverPassthrough = fieldName => async (
   source,
   args,
   context,
   info
 ) => {
-  const type = info.schema.getType("Mdx");
-  const mdxNode = context.nodeModel.getNodeById({
+  const type = info.schema.getType("MarkdownRemark");
+  const remarkNode = context.nodeModel.getNodeById({
     id: source.parent
   });
   const resolver = type.getFields()[fieldName].resolve;
-  const result = await resolver(mdxNode, args, context, {
+  const result = await resolver(remarkNode, args, context, {
     fieldName
   });
   return result;
@@ -46,7 +46,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   createTypes(`interface PortfolioItem @nodeInterface {
       id: ID!
       title: String!
-      body: String!
+      html: String!
       slug: String!
       tags: [String]!
       keywords: [String]!
@@ -55,7 +55,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
   createTypes(
     schema.buildObjectType({
-      name: "MdxPortfolioItem",
+      name: "RemarkPortfolioItem",
       fields: {
         id: { type: "ID!" },
         title: {
@@ -74,11 +74,11 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
               defaultValue: 140
             }
           },
-          resolve: mdxResolverPassthrough("excerpt")
+          resolve: remarkResolverPassthrough("excerpt")
         },
-        body: {
+        html: {
           type: "String!",
-          resolve: mdxResolverPassthrough("body")
+          resolve: remarkResolverPassthrough("html")
         }
       },
       interfaces: ["Node", "PortfolioItem"]
@@ -95,8 +95,7 @@ exports.onCreateNode = async (
   const { createNode, createParentChildLink } = actions;
   const { contentPath, basePath } = withDefaults(themeOptions);
 
-  // Make sure it's an MDX node
-  if (node.internal.type !== "Mdx") {
+  if (node.internal.type !== "MarkdownRemark") {
     return;
   }
 
@@ -104,7 +103,7 @@ exports.onCreateNode = async (
   const fileNode = getNode(node.parent);
   const source = fileNode.sourceInstanceName;
 
-  if (node.internal.type === "Mdx" && source === contentPath) {
+  if (node.internal.type === "MarkdownRemark" && source === contentPath) {
     let slug;
     if (node.frontmatter.slug) {
       if (path.isAbsolute(node.frontmatter.slug)) {
@@ -131,26 +130,28 @@ exports.onCreateNode = async (
       keywords: node.frontmatter.keywords || []
     };
 
-    const mdxPortfolioPieceId = createNodeId(`${node.id} >>> MdxPortfolioItem`);
+    const remarkPortfolioPieceId = createNodeId(
+      `${node.id} >>> RemarkPortfolioItem`
+    );
     await createNode({
       ...fieldData,
       // Required fields.
-      id: mdxPortfolioPieceId,
+      id: remarkPortfolioPieceId,
       parent: node.id,
       children: [],
       internal: {
-        type: "MdxPortfolioItem",
+        type: "RemarkPortfolioItem",
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(fieldData))
           .digest("hex"),
         content: JSON.stringify(fieldData),
-        description: "Mdx implementation of the PortfolioItem interface"
+        description: "Remark implementation of the PortfolioItem interface"
       }
     });
     createParentChildLink({
       parent: node,
-      child: getNode(mdxPortfolioPieceId)
+      child: getNode(remarkPortfolioPieceId)
     });
   }
 };

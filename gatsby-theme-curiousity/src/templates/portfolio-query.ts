@@ -8,10 +8,7 @@ export const query = graphql`
     allPortfolioItem(sort: { fields: [title] }, limit: 1000) {
       edges {
         node {
-          id
-          excerpt
-          slug
-          title
+          ...CuriousityPortfolio
         }
       }
     }

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import BaseLayout from "../Base";
 import { graphql } from "gatsby";
+import { remarkForm } from "gatsby-tinacms-remark";
 
 const Content = styled.div`
   max-width: 55em;
@@ -39,7 +40,24 @@ const ProjectPageTemplate = ({
   </BaseLayout>
 );
 
-export default ProjectPageTemplate;
+export default remarkForm(ProjectPageTemplate, {
+  queryName: "portfolioItem",
+  label: "Portfolio Piece",
+  fields: [
+    {
+      label: "Title",
+      name: "frontmatter.title",
+      description: "Enter the title of the post here",
+      component: "text"
+    },
+    {
+      name: "rawMarkdownBody",
+      component: "markdown",
+      label: "Piece Body",
+      description: "Edit the body of the post here"
+    }
+  ]
+});
 
 export const fragment = graphql`
   fragment CuriousityPiecePage on PortfolioItem {
@@ -50,5 +68,10 @@ export const fragment = graphql`
     title
     tags
     keywords
+    # Needed for TinaCMS
+    id
+    fileRelativePath
+    rawFrontmatter
+    rawMarkdownBody
   }
 `;

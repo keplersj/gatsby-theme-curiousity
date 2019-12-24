@@ -34,11 +34,15 @@ const remarkResolverPassthrough = fieldName => async (
   const remarkNode = context.nodeModel.getNodeById({
     id: source.parent
   });
-  const resolver = type.getFields()[fieldName].resolve;
-  const result = await resolver(remarkNode, args, context, {
-    fieldName
-  });
-  return result;
+  if (type.getFields()[fieldName].extensions.needsResolve) {
+    const resolver = type.getFields()[fieldName].resolve;
+    const result = await resolver(remarkNode, args, context, {
+      fieldName
+    });
+    return result;
+  } else {
+    return remarkNode[fieldName];
+  }
 };
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
@@ -51,6 +55,9 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       tags: [String]!
       keywords: [String]!
       excerpt: String!
+      fileRelativePath: String!
+      rawFrontmatter: String!
+      rawMarkdownBody: String!
   }`);
 
   createTypes(
@@ -79,6 +86,22 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         html: {
           type: "String!",
           resolve: remarkResolverPassthrough("html")
+        },
+        fileRelativePath: {
+          type: "String!",
+          resolve: remarkResolverPassthrough("fileRelativePath")
+        },
+        rawFrontmatter: {
+          type: "String!",
+          resolve: remarkResolverPassthrough("rawFrontmatter")
+        },
+        rawMarkdownBody: {
+          type: "String!",
+          resolve: remarkResolverPassthrough("rawMarkdownBody")
+        },
+        frontmatter: {
+          type: "MarkdownRemarkFrontmatter",
+          resolve: remarkResolverPassthrough("frontmatter")
         }
       },
       interfaces: ["Node", "PortfolioItem"]

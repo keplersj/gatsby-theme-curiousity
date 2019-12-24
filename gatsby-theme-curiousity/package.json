@@ -39,14 +39,18 @@
     "gatsby-plugin-emotion": "^4.1.9",
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-sharp": "^2.2.27",
+    "gatsby-plugin-tinacms": "^0.1.17",
     "gatsby-plugin-typescript": "^2.1.11",
     "gatsby-source-filesystem": "^2.1.28",
+    "gatsby-tinacms-git": "^0.2.15",
+    "gatsby-tinacms-remark": "^0.6.1",
     "gatsby-transformer-remark": "^2.6.45",
     "gatsby-transformer-sharp": "^2.2.19",
     "modern-normalize": "^0.6.0",
     "react-helmet": "^5.2.1",
     "starstuff-components": "^1.2.1",
     "starstuff-style": "^1.0.1",
+    "styled-components": "^4.4.1",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {

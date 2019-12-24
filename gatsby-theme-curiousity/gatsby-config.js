@@ -10,6 +10,16 @@ module.exports = themeOptions => {
       description: "This is a portfolio built using gatsby-theme-curiousity"
     },
     plugins: [
+      {
+        resolve: "gatsby-plugin-tinacms",
+        options: {
+          sidebar: {
+            hidden: process.env.NODE_ENV === "production",
+            position: "displace"
+          },
+          plugins: ["gatsby-tinacms-git", "gatsby-tinacms-remark"]
+        }
+      },
       remark && "gatsby-transformer-remark",
       {
         resolve: "gatsby-source-filesystem",

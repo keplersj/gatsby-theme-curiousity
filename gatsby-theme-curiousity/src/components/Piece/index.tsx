@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import BaseLayout from "../Base";
 import { graphql } from "gatsby";
-import { remarkForm } from "gatsby-tinacms-remark";
+import { remarkForm, DeleteAction } from "gatsby-tinacms-remark";
 
 const Content = styled.div`
   max-width: 55em;
@@ -43,6 +43,7 @@ const ProjectPageTemplate = ({
 export default remarkForm(ProjectPageTemplate, {
   queryName: "portfolioItem",
   label: "Portfolio Piece",
+  actions: [DeleteAction],
   fields: [
     {
       label: "Title",

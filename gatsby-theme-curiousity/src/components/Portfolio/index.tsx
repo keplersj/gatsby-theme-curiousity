@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import BaseLayout from "../Base";
 import { PortfolioListItem as Project } from "../PortfolioListItem";
 import { graphql } from "gatsby";
+import { withPlugin } from "tinacms";
+import { CreatePiecePlugin } from "../../lib/tinacms-creator-plugin";
 
 const Projects = styled.div`
   margin-left: 2em;
@@ -51,7 +53,7 @@ const ProjectsPage = ({ data }: Props): React.ReactElement<Props> => (
   </BaseLayout>
 );
 
-export default ProjectsPage;
+export default withPlugin(ProjectsPage, CreatePiecePlugin);
 
 export const fragment = graphql`
   fragment CuriousityPortfolio on PortfolioItem {

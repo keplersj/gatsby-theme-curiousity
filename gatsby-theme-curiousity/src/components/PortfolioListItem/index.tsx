@@ -67,12 +67,12 @@ export const PortfolioListItem = (props: Props): React.ReactElement<Props> => {
         item={{
           "@context": "https://schema.org",
           "@type": "CreativeWork",
-          "@id": `${data.site.siteMetadata.siteUrl}${location.pathname}`,
-          url: `${data.site.siteMetadata.siteUrl}${location.pathname}`,
+          "@id": `${data.site.siteMetadata.siteUrl}${props.location}`,
+          url: `${data.site.siteMetadata.siteUrl}${props.location}`,
           headline: props.title,
           name: props.title,
-          mainEntityOfPage: `${data.site.siteMetadata.siteUrl}${location.pathname}`,
-          image: props.featuredImage && {
+          mainEntityOfPage: `${data.site.siteMetadata.siteUrl}${props.location}`,
+          image: props.image && {
             "@type": "ImageObject",
             "@id": `${data.site.siteMetadata.siteUrl}${props.image.src}`
           }

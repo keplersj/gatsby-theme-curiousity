@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { remarkForm, DeleteAction } from "gatsby-tinacms-remark";
 import Image, { FluidObject } from "gatsby-image";
 import { JsonLd } from "react-schemaorg";
-import { ImageObject } from "schema-dts";
+import { ImageObject, CreativeWork } from "schema-dts";
 
 const Content = styled.article`
   max-width: 55em;
@@ -18,7 +18,7 @@ const Content = styled.article`
   }
 `;
 
-interface Props {
+interface Props extends PageRendererProps {
   data: {
     portfolioItem: {
       id: string;
@@ -38,7 +38,8 @@ interface Props {
 }
 
 const ProjectPageTemplate = ({
-  data: { portfolioItem: piece }
+  data: { portfolioItem: piece },
+  location
 }: Props): React.ReactElement<Props> => {
   const staticQuery = useStaticQuery(graphql`
     query CuriosityPostQuery {
@@ -53,6 +54,21 @@ const ProjectPageTemplate = ({
   return (
     <BaseLayout title={piece.title} description={piece.excerpt}>
       <Content>
+        <JsonLd<CreativeWork>
+          item={{
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "@id": `${staticQuery.site.siteMetadata.siteUrl}${location.pathname}`,
+            url: `${staticQuery.site.siteMetadata.siteUrl}${location.pathname}`,
+            headline: piece.title,
+            name: piece.title,
+            mainEntityOfPage: `${staticQuery.site.siteMetadata.siteUrl}${location.pathname}`,
+            image: piece.featuredImage && {
+              "@type": "ImageObject",
+              "@id": `${staticQuery.site.siteMetadata.siteUrl}${piece.featuredImage.childImageSharp.fluid.src}`
+            }
+          }}
+        />
         <header>
           <h1>{piece.title}</h1>
           {piece.featuredImage && (

@@ -4,7 +4,7 @@ import { Card } from "starstuff-components";
 import styled from "@emotion/styled";
 import { default as Image, FluidObject } from "gatsby-image";
 import { JsonLd } from "react-schemaorg";
-import { ImageObject } from "schema-dts";
+import { ImageObject, CreativeWork } from "schema-dts";
 
 interface Props {
   location: string;
@@ -63,6 +63,21 @@ export const PortfolioListItem = (props: Props): React.ReactElement<Props> => {
 
   return (
     <Container>
+      <JsonLd<CreativeWork>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "@id": `${data.site.siteMetadata.siteUrl}${location.pathname}`,
+          url: `${data.site.siteMetadata.siteUrl}${location.pathname}`,
+          headline: props.title,
+          name: props.title,
+          mainEntityOfPage: `${data.site.siteMetadata.siteUrl}${location.pathname}`,
+          image: props.featuredImage && {
+            "@type": "ImageObject",
+            "@id": `${data.site.siteMetadata.siteUrl}${props.image.src}`
+          }
+        }}
+      />
       {props.image && (
         <Link to={props.location}>
           <FeaturedImage>

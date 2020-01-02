@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import BaseLayout from "../Base";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, PageRendererProps } from "gatsby";
 import { remarkForm, DeleteAction } from "gatsby-tinacms-remark";
 import Image, { FluidObject } from "gatsby-image";
 import { JsonLd } from "react-schemaorg";
@@ -15,6 +15,14 @@ const Content = styled.article`
   @media (max-width: 55em) {
     margin-left: 2em;
     margin-right: 2em;
+  }
+`;
+
+const SupportingDetail = styled.span`
+  :not(:last-of-type) {
+    ::after {
+      content: " · ";
+    }
   }
 `;
 
@@ -32,6 +40,15 @@ interface Props extends PageRendererProps {
         childImageSharp: {
           fluid: FluidObject;
         };
+      };
+      frontmatter: {
+        type?: string[];
+        status?: string[];
+        role?: string[];
+        homepage?: string;
+        rubygems_gem_name?: string;
+        npm_package_name?: string;
+        github_repo?: string;
       };
     };
   };
@@ -71,6 +88,66 @@ const ProjectPageTemplate = ({
         />
         <header>
           <h1>{piece.title}</h1>
+          <div>
+            {piece.frontmatter.type && (
+              <SupportingDetail>
+                {"Type".toLocaleUpperCase()}:{" "}
+                {piece.frontmatter.type
+                  .map(type => type.toLocaleUpperCase())
+                  .join(", ")}
+              </SupportingDetail>
+            )}
+            {piece.frontmatter.status && (
+              <SupportingDetail>
+                {"Status".toLocaleUpperCase()}:{" "}
+                {piece.frontmatter.status
+                  .map(type => type.toLocaleUpperCase())
+                  .join(", ")}
+              </SupportingDetail>
+            )}
+            {piece.frontmatter.role && (
+              <SupportingDetail>
+                {"Role".toLocaleUpperCase()}:{" "}
+                {piece.frontmatter.role
+                  .map(role => role.toLocaleUpperCase())
+                  .join(", ")}
+              </SupportingDetail>
+            )}
+            {piece.frontmatter.homepage && (
+              <SupportingDetail>
+                <a href={piece.frontmatter.homepage}>
+                  {"Homepage".toLocaleUpperCase()}
+                </a>
+              </SupportingDetail>
+            )}
+            {piece.frontmatter.github_repo && (
+              <SupportingDetail>
+                <a
+                  href={`https://www.github.com/${piece.frontmatter.github_repo}`}
+                >
+                  {"GitHub".toLocaleUpperCase()}
+                </a>
+              </SupportingDetail>
+            )}
+            {piece.frontmatter.npm_package_name && (
+              <SupportingDetail>
+                <a
+                  href={`https://www.npmjs.com/package/${piece.frontmatter.npm_package_name}`}
+                >
+                  {"npm".toLocaleUpperCase()}
+                </a>
+              </SupportingDetail>
+            )}
+            {piece.frontmatter.rubygems_gem_name && (
+              <SupportingDetail>
+                <a
+                  href={`https://rubygems.org/gems/${piece.frontmatter.rubygems_gem_name}`}
+                >
+                  {"RubyGems".toLocaleUpperCase()}
+                </a>
+              </SupportingDetail>
+            )}
+          </div>
           {piece.featuredImage && (
             <figure id="featured-image">
               <JsonLd<ImageObject>
@@ -158,6 +235,17 @@ export const fragment = graphql`
         ) {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+    ... on RemarkPortfolioItem {
+      frontmatter {
+        type
+        status
+        role
+        homepage
+        rubygems_gem_name
+        npm_package_name
+        github_repo
       }
     }
     # Needed for TinaCMS

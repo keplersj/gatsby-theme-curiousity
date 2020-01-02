@@ -55,6 +55,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       tags: [String]!
       keywords: [String]!
       excerpt: String!
+      featuredImage: File
       fileRelativePath: String!
       rawFrontmatter: String!
       rawMarkdownBody: String!
@@ -87,6 +88,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           type: "String!",
           resolve: remarkResolverPassthrough("html")
         },
+        featuredImage: { type: "File", extensions: { fileByRelativePath: {} } },
         fileRelativePath: {
           type: "String!",
           resolve: remarkResolverPassthrough("fileRelativePath")
@@ -150,7 +152,8 @@ exports.onCreateNode = async (
       title: node.frontmatter.title,
       tags: node.frontmatter.tags || [],
       slug,
-      keywords: node.frontmatter.keywords || []
+      keywords: node.frontmatter.keywords || [],
+      featuredImage: node.frontmatter.featured_image
     };
 
     const remarkPortfolioPieceId = createNodeId(

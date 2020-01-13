@@ -47,6 +47,18 @@ const remarkResolverPassthrough = fieldName => async (
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
+
+  createTypes(`type PortfolioItemMetadata {
+    id: ID!
+    type: [String]
+    homepage: String
+    githubRepo: String
+    npmPackageName: String
+    rubygemsGemName: String
+    status: [String]
+    role: [String]
+  }`);
+
   createTypes(`interface PortfolioItem @nodeInterface {
       id: ID!
       title: String!
@@ -59,9 +71,24 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       fileRelativePath: String!
       rawFrontmatter: String!
       rawMarkdownBody: String!
+      metadata: PortfolioItemMetadata!
   }`);
 
   createTypes(
+    // schema.buildObjectType({
+    //   name: "RemarkPortfolioItemMetadata",
+    //   fields: {
+    //     id: { type: "ID!" },
+    //     type: { type: "[String]" },
+    //     githubRepo: { type: "String" },
+    //     npmPackageName: { type: "String" },
+    //     rubygemsGemName: { type: "String" },
+    //     status: { type: "[String]" },
+    //     role: { type: "[String]" }
+    //   },
+    //   interfaces: ["Node", "PortfolioItemMetadata"]
+    // }),
+
     schema.buildObjectType({
       name: "RemarkPortfolioItem",
       fields: {
@@ -104,6 +131,43 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         frontmatter: {
           type: "MarkdownRemarkFrontmatter",
           resolve: remarkResolverPassthrough("frontmatter")
+        },
+        metadata: {
+          type: "PortfolioItemMetadata!",
+          resolve: async (source, args, context, info) => {
+            const frontmatter = await remarkResolverPassthrough("frontmatter")(
+              source,
+              args,
+              context,
+              info
+            );
+            return {
+              type:
+                frontmatter && frontmatter.type ? frontmatter.type : undefined,
+              homepage:
+                frontmatter && frontmatter.homepage
+                  ? frontmatter.homepage
+                  : undefined,
+              githubRepo:
+                frontmatter && frontmatter.github_repo
+                  ? frontmatter.github_repo
+                  : undefined,
+              npmPackageName:
+                frontmatter && frontmatter.npm_package_name
+                  ? frontmatter.npm_package_name
+                  : undefined,
+              rubygemsGemName:
+                frontmatter && frontmatter.rubygems_gem_name
+                  ? frontmatter.rubygems_gem_name
+                  : undefined,
+              status:
+                frontmatter && frontmatter.status
+                  ? frontmatter.status
+                  : undefined,
+              role:
+                frontmatter && frontmatter.role ? frontmatter.role : undefined
+            };
+          }
         }
       },
       interfaces: ["Node", "PortfolioItem"]

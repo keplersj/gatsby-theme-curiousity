@@ -41,14 +41,14 @@ interface Props extends PageRendererProps {
           fluid: FluidObject;
         };
       };
-      frontmatter: {
+      metadata: {
         type?: string[];
         status?: string[];
         role?: string[];
         homepage?: string;
-        rubygems_gem_name?: string;
-        npm_package_name?: string;
-        github_repo?: string;
+        rubygemsGemName?: string;
+        npmPackageName?: string;
+        githubRepo?: string;
       };
     };
   };
@@ -89,59 +89,57 @@ const ProjectPageTemplate = ({
         <header>
           <h1>{piece.title}</h1>
           <div>
-            {piece.frontmatter.type && (
+            {piece.metadata.type && (
               <SupportingDetail>
                 {"Type".toLocaleUpperCase()}:{" "}
-                {piece.frontmatter.type
+                {piece.metadata.type
                   .map(type => type.toLocaleUpperCase())
                   .join(", ")}
               </SupportingDetail>
             )}
-            {piece.frontmatter.status && (
+            {piece.metadata.status && (
               <SupportingDetail>
                 {"Status".toLocaleUpperCase()}:{" "}
-                {piece.frontmatter.status
+                {piece.metadata.status
                   .map(type => type.toLocaleUpperCase())
                   .join(", ")}
               </SupportingDetail>
             )}
-            {piece.frontmatter.role && (
+            {piece.metadata.role && (
               <SupportingDetail>
                 {"Role".toLocaleUpperCase()}:{" "}
-                {piece.frontmatter.role
+                {piece.metadata.role
                   .map(role => role.toLocaleUpperCase())
                   .join(", ")}
               </SupportingDetail>
             )}
-            {piece.frontmatter.homepage && (
+            {piece.metadata.homepage && (
               <SupportingDetail>
-                <a href={piece.frontmatter.homepage}>
+                <a href={piece.metadata.homepage}>
                   {"Homepage".toLocaleUpperCase()}
                 </a>
               </SupportingDetail>
             )}
-            {piece.frontmatter.github_repo && (
+            {piece.metadata.githubRepo && (
               <SupportingDetail>
-                <a
-                  href={`https://www.github.com/${piece.frontmatter.github_repo}`}
-                >
+                <a href={`https://www.github.com/${piece.metadata.githubRepo}`}>
                   {"GitHub".toLocaleUpperCase()}
                 </a>
               </SupportingDetail>
             )}
-            {piece.frontmatter.npm_package_name && (
+            {piece.metadata.npmPackageName && (
               <SupportingDetail>
                 <a
-                  href={`https://www.npmjs.com/package/${piece.frontmatter.npm_package_name}`}
+                  href={`https://www.npmjs.com/package/${piece.metadata.npmPackageName}`}
                 >
                   {"npm".toLocaleUpperCase()}
                 </a>
               </SupportingDetail>
             )}
-            {piece.frontmatter.rubygems_gem_name && (
+            {piece.metadata.rubygemsGemName && (
               <SupportingDetail>
                 <a
-                  href={`https://rubygems.org/gems/${piece.frontmatter.rubygems_gem_name}`}
+                  href={`https://rubygems.org/gems/${piece.metadata.rubygemsGemName}`}
                 >
                   {"RubyGems".toLocaleUpperCase()}
                 </a>
@@ -237,16 +235,14 @@ export const fragment = graphql`
         }
       }
     }
-    ... on RemarkPortfolioItem {
-      frontmatter {
-        type
-        status
-        role
-        homepage
-        rubygems_gem_name
-        npm_package_name
-        github_repo
-      }
+    metadata {
+      type
+      status
+      role
+      homepage
+      rubygemsGemName
+      npmPackageName
+      githubRepo
     }
     # Needed for TinaCMS
     id

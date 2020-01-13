@@ -55,7 +55,7 @@
     "starstuff-components": "^1.2.1",
     "starstuff-style": "^1.0.1",
     "styled-components": "^4.4.1",
-    "tinacms": "^0.11.0",
+    "tinacms": "^0.11.1",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {

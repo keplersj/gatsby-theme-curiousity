@@ -19,6 +19,8 @@ const Content = styled.article`
 `;
 
 const SupportingDetail = styled.span`
+  text-transform: uppercase;
+
   :not(:last-of-type) {
     ::after {
       content: " · ";
@@ -91,39 +93,28 @@ const ProjectPageTemplate = ({
           <div>
             {piece.metadata.type && (
               <SupportingDetail>
-                {"Type".toLocaleUpperCase()}:{" "}
-                {piece.metadata.type
-                  .map(type => type.toLocaleUpperCase())
-                  .join(", ")}{" "}
+                Type: {piece.metadata.type.join(", ")}{" "}
               </SupportingDetail>
             )}
             {piece.metadata.status && (
               <SupportingDetail>
-                {"Status".toLocaleUpperCase()}:{" "}
-                {piece.metadata.status
-                  .map(type => type.toLocaleUpperCase())
-                  .join(", ")}{" "}
+                Status: {piece.metadata.status.join(", ")}{" "}
               </SupportingDetail>
             )}
             {piece.metadata.role && (
               <SupportingDetail>
-                {"Role".toLocaleUpperCase()}:{" "}
-                {piece.metadata.role
-                  .map(role => role.toLocaleUpperCase())
-                  .join(", ")}{" "}
+                Role: {piece.metadata.role.join(", ")}{" "}
               </SupportingDetail>
             )}
             {piece.metadata.homepage && (
               <SupportingDetail>
-                <a href={piece.metadata.homepage}>
-                  {"Homepage".toLocaleUpperCase()}
-                </a>{" "}
+                <a href={piece.metadata.homepage}>Homepage</a>{" "}
               </SupportingDetail>
             )}
             {piece.metadata.githubRepo && (
               <SupportingDetail>
                 <a href={`https://www.github.com/${piece.metadata.githubRepo}`}>
-                  {"GitHub".toLocaleUpperCase()}
+                  GitHub
                 </a>{" "}
               </SupportingDetail>
             )}
@@ -132,7 +123,7 @@ const ProjectPageTemplate = ({
                 <a
                   href={`https://www.npmjs.com/package/${piece.metadata.npmPackageName}`}
                 >
-                  {"npm".toLocaleUpperCase()}
+                  npm
                 </a>{" "}
               </SupportingDetail>
             )}
@@ -141,7 +132,7 @@ const ProjectPageTemplate = ({
                 <a
                   href={`https://rubygems.org/gems/${piece.metadata.rubygemsGemName}`}
                 >
-                  {"RubyGems".toLocaleUpperCase()}
+                  RubyGems
                 </a>{" "}
               </SupportingDetail>
             )}

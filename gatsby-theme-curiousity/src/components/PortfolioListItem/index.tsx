@@ -39,9 +39,15 @@ const Container = styled.article`
 const FeaturedImage = styled.figure`
   height: 100%;
   width: 100%;
+
   @media screen and (max-width: 321px) {
     display: none;
   }
+`;
+
+const StyledImage = styled(Image)`
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 `;
 
 const Info = styled.div`
@@ -93,7 +99,7 @@ export const PortfolioListItem = (props: Props): React.ReactElement<Props> => {
                   url: props.image.src
                 }}
               />
-              <Image fluid={props.image} />
+              <StyledImage fluid={props.image} />
             </FeaturedImage>
           </Link>
         )}

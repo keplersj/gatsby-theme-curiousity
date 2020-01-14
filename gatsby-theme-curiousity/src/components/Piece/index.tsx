@@ -94,7 +94,7 @@ const ProjectPageTemplate = ({
                 {"Type".toLocaleUpperCase()}:{" "}
                 {piece.metadata.type
                   .map(type => type.toLocaleUpperCase())
-                  .join(", ")}
+                  .join(", ")}{" "}
               </SupportingDetail>
             )}
             {piece.metadata.status && (
@@ -102,7 +102,7 @@ const ProjectPageTemplate = ({
                 {"Status".toLocaleUpperCase()}:{" "}
                 {piece.metadata.status
                   .map(type => type.toLocaleUpperCase())
-                  .join(", ")}
+                  .join(", ")}{" "}
               </SupportingDetail>
             )}
             {piece.metadata.role && (
@@ -110,21 +110,21 @@ const ProjectPageTemplate = ({
                 {"Role".toLocaleUpperCase()}:{" "}
                 {piece.metadata.role
                   .map(role => role.toLocaleUpperCase())
-                  .join(", ")}
+                  .join(", ")}{" "}
               </SupportingDetail>
             )}
             {piece.metadata.homepage && (
               <SupportingDetail>
                 <a href={piece.metadata.homepage}>
                   {"Homepage".toLocaleUpperCase()}
-                </a>
+                </a>{" "}
               </SupportingDetail>
             )}
             {piece.metadata.githubRepo && (
               <SupportingDetail>
                 <a href={`https://www.github.com/${piece.metadata.githubRepo}`}>
                   {"GitHub".toLocaleUpperCase()}
-                </a>
+                </a>{" "}
               </SupportingDetail>
             )}
             {piece.metadata.npmPackageName && (
@@ -133,7 +133,7 @@ const ProjectPageTemplate = ({
                   href={`https://www.npmjs.com/package/${piece.metadata.npmPackageName}`}
                 >
                   {"npm".toLocaleUpperCase()}
-                </a>
+                </a>{" "}
               </SupportingDetail>
             )}
             {piece.metadata.rubygemsGemName && (
@@ -142,7 +142,7 @@ const ProjectPageTemplate = ({
                   href={`https://rubygems.org/gems/${piece.metadata.rubygemsGemName}`}
                 >
                   {"RubyGems".toLocaleUpperCase()}
-                </a>
+                </a>{" "}
               </SupportingDetail>
             )}
           </div>

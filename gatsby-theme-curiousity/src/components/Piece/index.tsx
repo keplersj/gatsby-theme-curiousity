@@ -6,6 +6,7 @@ import { remarkForm, DeleteAction } from "gatsby-tinacms-remark";
 import Image, { FluidObject } from "gatsby-image";
 import { JsonLd } from "react-schemaorg";
 import { ImageObject, CreativeWork } from "schema-dts";
+import { readableColor } from "polished";
 
 const Content = styled.article`
   max-width: 55em;
@@ -18,37 +19,82 @@ const Content = styled.article`
   }
 `;
 
-const SupportingDetail = styled.span`
-  text-transform: uppercase;
+const SupportingDetails = styled.div`
+  margin: 0.5em 0;
 
-  :not(:last-of-type) {
+  @media screen and (min-width: 1024px) {
+    margin: 0.5em;
+  }
+`;
+
+interface SupportingDetailProps {
+  backgroundColor?: string;
+}
+
+const SupportingDetail = styled.span<SupportingDetailProps>`
+  text-transform: uppercase;
+  margin-bottom: 1em;
+
+  @media screen and (max-width: 1023px) {
+    :not(:last-child) {
+      :after {
+        content: " · ";
+      }
+    }
+  }
+
+  /* The parallelogram effect is really cool, but I can't get it to consistently work at anything less than a laptop-class display. Will get it to work one day. */
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    padding: 0.3em 0.45em;
+
+    color: ${({ backgroundColor }) =>
+      backgroundColor && readableColor(backgroundColor)};
+
+    a {
+      color: ${({ backgroundColor }) =>
+        backgroundColor && readableColor(backgroundColor)};
+    }
+
+    ::before,
     ::after {
-      content: " · ";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: skew(20deg);
+      background-color: ${({ backgroundColor }) => backgroundColor};
+      z-index: -1;
+      content: "";
+      position: absolute;
+      white-space: nowrap;
     }
   }
 `;
 
-interface SupportingListProps {
+interface SupportingListProps extends SupportingDetailProps {
   type: string;
   list?: string[];
 }
 
 const SupportingList = (props: SupportingListProps) =>
   props.list && (
-    <SupportingDetail>
-      {props.type}: {props.list.join(", ")}{" "}
+    <SupportingDetail {...props}>
+      {props.type}: {props.list.join(", ")}
+      {"​\u200B"}
     </SupportingDetail>
   );
 
-interface SupportingLinkProps {
+interface SupportingLinkProps extends SupportingDetailProps {
   name: string;
   destination?: string;
 }
 
 const SupportingLink = (props: SupportingLinkProps) =>
   props.destination && (
-    <SupportingDetail>
-      <a href={props.destination}>{props.name}</a>{" "}
+    <SupportingDetail {...props}>
+      <a href={props.destination}>{props.name}</a>
+      {"​\u200B"}
     </SupportingDetail>
   );
 
@@ -114,13 +160,26 @@ const ProjectPageTemplate = ({
         />
         <header>
           <h1>{piece.title}</h1>
-          <div>
-            <SupportingList type="Type" list={piece.metadata.type} />
-            <SupportingList type="Status" list={piece.metadata.status} />
-            <SupportingList type="Role" list={piece.metadata.role} />
+          <SupportingDetails>
+            <SupportingList
+              type="Type"
+              list={piece.metadata.type}
+              backgroundColor="slategray"
+            />
+            <SupportingList
+              type="Status"
+              list={piece.metadata.status}
+              backgroundColor="darkolivegreen"
+            />
+            <SupportingList
+              type="Role"
+              list={piece.metadata.role}
+              backgroundColor="maroon"
+            />
             <SupportingLink
               name="Homepage"
               destination={piece.metadata.homepage}
+              backgroundColor="#3d7e9a"
             />
             <SupportingLink
               name="GitHub"
@@ -128,6 +187,7 @@ const ProjectPageTemplate = ({
                 piece.metadata.githubRepo &&
                 `https://www.github.com/${piece.metadata.githubRepo}`
               }
+              backgroundColor="#24292e"
             />
             <SupportingLink
               name="npm"
@@ -135,6 +195,7 @@ const ProjectPageTemplate = ({
                 piece.metadata.npmPackageName &&
                 `https://www.npmjs.com/package/${piece.metadata.npmPackageName}`
               }
+              backgroundColor="#C12127"
             />
             <SupportingLink
               name="RubyGems"
@@ -142,8 +203,9 @@ const ProjectPageTemplate = ({
                 piece.metadata.rubygemsGemName &&
                 `https://rubygems.org/gems/${piece.metadata.rubygemsGemName}`
               }
+              backgroundColor="#e9573f"
             />
-          </div>
+          </SupportingDetails>
           {piece.featuredImage && (
             <figure id="featured-image">
               <JsonLd<ImageObject>

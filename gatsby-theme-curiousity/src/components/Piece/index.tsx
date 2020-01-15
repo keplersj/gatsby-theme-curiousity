@@ -28,6 +28,30 @@ const SupportingDetail = styled.span`
   }
 `;
 
+interface SupportingListProps {
+  type: string;
+  list?: string[];
+}
+
+const SupportingList = (props: SupportingListProps) =>
+  props.list && (
+    <SupportingDetail>
+      {props.type}: {props.list.join(", ")}{" "}
+    </SupportingDetail>
+  );
+
+interface SupportingLinkProps {
+  name: string;
+  destination?: string;
+}
+
+const SupportingLink = (props: SupportingLinkProps) =>
+  props.destination && (
+    <SupportingDetail>
+      <a href={props.destination}>{props.name}</a>{" "}
+    </SupportingDetail>
+  );
+
 interface Props extends PageRendererProps {
   data: {
     portfolioItem: {
@@ -91,51 +115,34 @@ const ProjectPageTemplate = ({
         <header>
           <h1>{piece.title}</h1>
           <div>
-            {piece.metadata.type && (
-              <SupportingDetail>
-                Type: {piece.metadata.type.join(", ")}{" "}
-              </SupportingDetail>
-            )}
-            {piece.metadata.status && (
-              <SupportingDetail>
-                Status: {piece.metadata.status.join(", ")}{" "}
-              </SupportingDetail>
-            )}
-            {piece.metadata.role && (
-              <SupportingDetail>
-                Role: {piece.metadata.role.join(", ")}{" "}
-              </SupportingDetail>
-            )}
-            {piece.metadata.homepage && (
-              <SupportingDetail>
-                <a href={piece.metadata.homepage}>Homepage</a>{" "}
-              </SupportingDetail>
-            )}
-            {piece.metadata.githubRepo && (
-              <SupportingDetail>
-                <a href={`https://www.github.com/${piece.metadata.githubRepo}`}>
-                  GitHub
-                </a>{" "}
-              </SupportingDetail>
-            )}
-            {piece.metadata.npmPackageName && (
-              <SupportingDetail>
-                <a
-                  href={`https://www.npmjs.com/package/${piece.metadata.npmPackageName}`}
-                >
-                  npm
-                </a>{" "}
-              </SupportingDetail>
-            )}
-            {piece.metadata.rubygemsGemName && (
-              <SupportingDetail>
-                <a
-                  href={`https://rubygems.org/gems/${piece.metadata.rubygemsGemName}`}
-                >
-                  RubyGems
-                </a>{" "}
-              </SupportingDetail>
-            )}
+            <SupportingList type="Type" list={piece.metadata.type} />
+            <SupportingList type="Status" list={piece.metadata.status} />
+            <SupportingList type="Role" list={piece.metadata.role} />
+            <SupportingLink
+              name="Homepage"
+              destination={piece.metadata.homepage}
+            />
+            <SupportingLink
+              name="GitHub"
+              destination={
+                piece.metadata.githubRepo &&
+                `https://www.github.com/${piece.metadata.githubRepo}`
+              }
+            />
+            <SupportingLink
+              name="npm"
+              destination={
+                piece.metadata.npmPackageName &&
+                `https://www.npmjs.com/package/${piece.metadata.npmPackageName}`
+              }
+            />
+            <SupportingLink
+              name="RubyGems"
+              destination={
+                piece.metadata.rubygemsGemName &&
+                `https://rubygems.org/gems/${piece.metadata.rubygemsGemName}`
+              }
+            />
           </div>
           {piece.featuredImage && (
             <figure id="featured-image">

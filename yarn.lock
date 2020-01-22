@@ -1894,7 +1894,7 @@
     react-dropzone "10.1.8"
     react-select "^2.3.0"
 
-"@tinacms/form-builder@^0.2.11", "@tinacms/form-builder@^0.2.12":
+"@tinacms/form-builder@^0.2.12":
   version "0.2.12"
   resolved "https://registry.yarnpkg.com/@tinacms/form-builder/-/form-builder-0.2.12.tgz#ee61926741a2f9fa1352f3a2aeef49623e9725c2"
   integrity sha512-8Ru8uhxlnJNeDAGCJupBcbnd3qWNTGJdW26lVSsAjxSloSD57soKFw4XWs26VZ01K82a7dCHbStnETAjPsx0qQ==
@@ -7244,17 +7244,17 @@ gatsby-tinacms-git@^0.2.16:
     simple-git "1.124.0"
     tinacms "^0.11.2"
 
-gatsby-tinacms-remark@^0.6.3:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.6.3.tgz#730d698e6ad57c9cc7bf7a032ed90ae418c14af5"
-  integrity sha512-/KlVMuyUXmZKL1DFuiLm6u7DOs/8Fp9V+EQNiw/cAM9rYfEV/VHVvSOS8uabK4eKaOvsTZL4bRxUcGEHckOOdA==
+gatsby-tinacms-remark@^0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.6.4.tgz#00e0740ba7ad86ca1e0a5375b37cb2b91b65b9b8"
+  integrity sha512-ct0jWA/fzmGf5j/gBzKH5jAunx2mYATvm9Y7+zWvXyqH3iXA63uEyc5OU9st1SojqvVW5nZ17miMx5OYaBYHpg==
   dependencies:
-    "@tinacms/core" "^0.6.0"
-    "@tinacms/form-builder" "^0.2.11"
+    "@tinacms/core" "^0.6.1"
+    "@tinacms/form-builder" "^0.2.12"
     gray-matter "^4.0.2"
     lodash.get "^4.4.2"
     slash "^3.0.0"
-    tinacms "^0.11.2"
+    tinacms "^0.11.3"
 
 gatsby-transformer-remark@^2.6.48:
   version "2.6.48"

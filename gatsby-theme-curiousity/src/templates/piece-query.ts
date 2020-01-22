@@ -1,7 +1,11 @@
 import { graphql } from "gatsby";
-import PostPage from "../components/Piece";
+import PostPage, { PiecePage } from "../components/Piece";
 
 export default PostPage;
+
+export interface PiecePageQuery {
+  portfolioItem: PiecePage;
+}
 
 export const query = graphql`
   query CuriousityPiecePageQuery($id: String!) {

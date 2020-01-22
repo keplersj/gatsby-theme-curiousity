@@ -5,6 +5,15 @@ import { useStaticQuery, graphql } from "gatsby";
 import "modern-normalize";
 import "starstuff-style";
 
+export interface BaseLayoutData {
+  site: {
+    siteMetadata: {
+      title: string;
+      siteUrl: string;
+    };
+  };
+}
+
 interface Props {
   title?: string;
   description?: string;
@@ -13,7 +22,7 @@ interface Props {
 const BaseLayout = (
   props: React.PropsWithChildren<Props>
 ): React.ReactElement<React.PropsWithChildren<Props>> => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<BaseLayoutData>(graphql`
     query CuriousityBaseLayoutData {
       site {
         siteMetadata {

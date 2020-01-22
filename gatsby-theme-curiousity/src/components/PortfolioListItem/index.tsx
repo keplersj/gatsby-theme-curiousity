@@ -13,6 +13,14 @@ interface Props {
   image?: FluidObject;
 }
 
+export interface PortfolioPieceItemQuery {
+  site: {
+    siteMetadata: {
+      siteUrl: string;
+    };
+  };
+}
+
 const StyledCard = styled(Card)`
   @media screen and (min-width: 1024px) {
     min-height: 192px;
@@ -58,7 +66,7 @@ const Info = styled.div`
 `;
 
 export const PortfolioListItem = (props: Props): React.ReactElement<Props> => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<PortfolioPieceItemQuery>(graphql`
     query CuriosityPortfolioPieceItemQuery {
       site {
         siteMetadata {

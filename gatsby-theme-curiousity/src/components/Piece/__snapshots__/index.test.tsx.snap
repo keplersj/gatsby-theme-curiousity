@@ -1,0 +1,453 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Piece Page Component renders as expected 1`] = `
+.emotion-8 {
+  max-width: 55em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:55em) {
+  .emotion-8 {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+.emotion-7 {
+  margin: 0.5em 0;
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-7 {
+    margin: 0.5em;
+  }
+}
+
+.emotion-0 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .emotion-0:not(:last-child):after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-0 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #000;
+  }
+
+  .emotion-0 a {
+    color: #000;
+  }
+
+  .emotion-0::before,
+  .emotion-0::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: slategray;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-1 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .emotion-1:not(:last-child):after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-1 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #fff;
+  }
+
+  .emotion-1 a {
+    color: #fff;
+  }
+
+  .emotion-1::before,
+  .emotion-1::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: darkolivegreen;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-2 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .emotion-2:not(:last-child):after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-2 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #fff;
+  }
+
+  .emotion-2 a {
+    color: #fff;
+  }
+
+  .emotion-2::before,
+  .emotion-2::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: maroon;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-3 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .emotion-3:not(:last-child):after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-3 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #000;
+  }
+
+  .emotion-3 a {
+    color: #000;
+  }
+
+  .emotion-3::before,
+  .emotion-3::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: #3d7e9a;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-4 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .emotion-4:not(:last-child):after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-4 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #fff;
+  }
+
+  .emotion-4 a {
+    color: #fff;
+  }
+
+  .emotion-4::before,
+  .emotion-4::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: #24292e;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-5 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .emotion-5:not(:last-child):after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-5 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #fff;
+  }
+
+  .emotion-5 a {
+    color: #fff;
+  }
+
+  .emotion-5::before,
+  .emotion-5::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: #C12127;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-6 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .emotion-6:not(:last-child):after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .emotion-6 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #000;
+  }
+
+  .emotion-6 a {
+    color: #000;
+  }
+
+  .emotion-6::before,
+  .emotion-6::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: #e9573f;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+<head>
+  Object {}
+  Object {
+    "lang": "en",
+  }
+  <meta
+    content="test excerpt"
+    data-react-helmet={true}
+    name="description"
+  />
+  <meta
+    content="Test Piece | Test Site"
+    data-react-helmet={true}
+    property="og:title"
+  />
+  <meta
+    content="https://example.dev/"
+    data-react-helmet={true}
+    property="og:url"
+  />
+  <meta
+    content="test excerpt"
+    data-react-helmet={true}
+    property="og:description"
+  />
+  <title
+    data-react-helmet={true}
+  >
+    Test Piece | Test Site
+  </title>
+</head>
+
+<main>
+  <article
+    className="emotion-8"
+  >
+    <script
+      type="application/ld+json"
+    >
+      Object {
+      "@context": "https://schema.org",
+      "@id": "https://example.dev//",
+      "@type": "CreativeWork",
+      "headline": "Test Piece",
+      "mainEntityOfPage": "https://example.dev//",
+      "name": "Test Piece",
+      "url": "https://example.dev//",
+    }
+    </script>
+    <header>
+      <h1>
+        Test Piece
+      </h1>
+      <div
+        className="emotion-7"
+      >
+        <span
+          className="emotion-0"
+          list={
+            Array [
+              "Test",
+            ]
+          }
+          type="Type"
+        >
+          Type
+          : 
+          Test
+          ​​
+        </span>
+        <span
+          className="emotion-1"
+          list={
+            Array [
+              "Test",
+            ]
+          }
+          type="Status"
+        >
+          Status
+          : 
+          Test
+          ​​
+        </span>
+        <span
+          className="emotion-2"
+          list={
+            Array [
+              "Test",
+            ]
+          }
+          type="Role"
+        >
+          Role
+          : 
+          Test
+          ​​
+        </span>
+        <span
+          className="emotion-3"
+          name="Homepage"
+        >
+          <a
+            href="https://example.dev/"
+          >
+            Homepage
+          </a>
+          ​​
+        </span>
+        <span
+          className="emotion-4"
+          name="GitHub"
+        >
+          <a
+            href="https://www.github.com/test/test"
+          >
+            GitHub
+          </a>
+          ​​
+        </span>
+        <span
+          className="emotion-5"
+          name="npm"
+        >
+          <a
+            href="https://www.npmjs.com/package/test"
+          >
+            npm
+          </a>
+          ​​
+        </span>
+        <span
+          className="emotion-6"
+          name="RubyGems"
+        >
+          <a
+            href="https://rubygems.org/gems/test"
+          >
+            RubyGems
+          </a>
+          ​​
+        </span>
+      </div>
+    </header>
+    <main
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<div><span>Test Piece</span></div>",
+        }
+      }
+    />
+  </article>
+</main>
+`;

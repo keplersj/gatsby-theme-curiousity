@@ -19,21 +19,23 @@ const ListContainer = styled.div`
   justify-content: space-around;
 `;
 
+export interface PortfolioListing {
+  id: string;
+  excerpt: string;
+  slug: string;
+  title: string;
+  featuredImage?: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+}
+
 interface Props {
   data: {
     allPortfolioItem: {
       edges: {
-        node: {
-          id: string;
-          excerpt: string;
-          slug: string;
-          title: string;
-          featuredImage?: {
-            childImageSharp: {
-              fluid: FluidObject;
-            };
-          };
-        };
+        node: PortfolioListing;
       }[];
     };
   };
@@ -63,7 +65,7 @@ const ProjectsPage = ({ data }: Props): React.ReactElement<Props> => (
 export default withPlugin(ProjectsPage, CreatePiecePlugin);
 
 export const fragment = graphql`
-  fragment CuriousityPortfolio on PortfolioItem {
+  fragment CuriousityPortfolioListing on PortfolioItem {
     id
     excerpt
     slug

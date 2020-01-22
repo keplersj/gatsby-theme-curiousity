@@ -98,31 +98,55 @@ const SupportingLink = (props: SupportingLinkProps) =>
     </SupportingDetail>
   );
 
-interface Props extends PageRendererProps {
-  data: {
-    portfolioItem: {
-      id: string;
-      excerpt: string;
-      html: string;
-      slug: string;
-      title: string;
-      tags: string[];
-      keywords: string[];
-      featuredImage?: {
-        childImageSharp: {
-          fluid: FluidObject;
+export interface PostQuery {
+  site: {
+    siteMetadata: {
+      siteUrl: string;
+    };
+  };
+}
+
+export interface PiecePage {
+  id: string;
+  excerpt: string;
+  html: string;
+  slug: string;
+  title: string;
+  tags: string[];
+  keywords: string[];
+  featuredImage?: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+  metadata: {
+    type?: string[];
+    status?: string[];
+    role?: string[];
+    homepage?: string;
+    rubygemsGemName?: string;
+    npmPackageName?: string;
+    githubRepo?: string;
+  };
+  // Needed for TinaCMS
+  // id: string;
+  fileRelativePath: string;
+  rawFrontmatter: string;
+  rawMarkdownBody: string;
+  frontmatter: {
+    featured_image?: {
+      childImageSharp: {
+        fluid: {
+          src;
         };
       };
-      metadata: {
-        type?: string[];
-        status?: string[];
-        role?: string[];
-        homepage?: string;
-        rubygemsGemName?: string;
-        npmPackageName?: string;
-        githubRepo?: string;
-      };
     };
+  };
+}
+
+interface Props extends PageRendererProps {
+  data: {
+    portfolioItem: PiecePage;
   };
 }
 
@@ -130,7 +154,7 @@ const ProjectPageTemplate = ({
   data: { portfolioItem: piece },
   location
 }: Props): React.ReactElement<Props> => {
-  const staticQuery = useStaticQuery(graphql`
+  const staticQuery = useStaticQuery<PostQuery>(graphql`
     query CuriosityPostQuery {
       site {
         siteMetadata {

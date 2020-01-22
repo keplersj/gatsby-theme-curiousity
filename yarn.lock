@@ -7143,12 +7143,12 @@ gatsby-plugin-sharp@^2.4.0:
     svgo "1.3.2"
     uuid "^3.3.3"
 
-gatsby-plugin-tinacms@^0.1.18, gatsby-plugin-tinacms@^0.1.19:
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.19.tgz#24bf227eb2df9a917c1120132b2b7ee2b7ae982f"
-  integrity sha512-OH5Or+0XB0stIxxz3sRq+G02aB75+ca2TYCQ/eRB8DL8XavqvK9EwVnS9X9MdR74s2WWhI+yDB9QU5WELktqUg==
+gatsby-plugin-tinacms@^0.1.19, gatsby-plugin-tinacms@^0.1.20:
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.20.tgz#e3362d49c9593a000a9432ce5120b3c0ecbecf01"
+  integrity sha512-NjBKaxozFNLUxl9r9ZYwXD13b8RVVUST0UUp4SdLOAvQ61PUmlKHSiAIDihmXjA7Onv5ihwoNiOf3HKKu9ZtDA==
   dependencies:
-    "@tinacms/core" "^0.6.0"
+    "@tinacms/core" "^0.6.1"
     "@types/cors" "^2.8.5"
     "@types/express" "^4.17.0"
     "@types/js-yaml" "^3.12.1"
@@ -7157,7 +7157,7 @@ gatsby-plugin-tinacms@^0.1.18, gatsby-plugin-tinacms@^0.1.19:
     express "^4.17.1"
     js-yaml "^3.13.1"
     lodash.throttle "^4.1.1"
-    tinacms "^0.11.2"
+    tinacms "^0.11.3"
 
 gatsby-plugin-typescript@^2.1.26:
   version "2.1.26"

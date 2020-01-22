@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
-    "@types/react": "^16.9.18",
+    "@types/react": "^16.9.19",
     "@types/react-helmet": "^5.0.15",
     "gatsby-core-utils": "^1.0.26",
     "gatsby-image": "^2.2.39",

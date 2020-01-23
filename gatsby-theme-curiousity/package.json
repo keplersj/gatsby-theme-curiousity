@@ -24,7 +24,7 @@
   "homepage": "https://github.com/keplersj/gatsby-theme-curiousity#readme",
   "devDependencies": {
     "@types/deepmerge": "^2.2.0",
-    "@types/jest": "^24.9.0",
+    "@types/jest": "^24.9.1",
     "@types/react-test-renderer": "^16.9.2",
     "deepmerge": "^4.2.2",
     "gatsby": "^2.19.3",

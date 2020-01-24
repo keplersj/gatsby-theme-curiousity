@@ -27,7 +27,7 @@
     "@types/jest": "^24.9.1",
     "@types/react-test-renderer": "^16.9.2",
     "deepmerge": "^4.2.2",
-    "gatsby": "^2.19.4",
+    "gatsby": "^2.19.5",
     "jest": "^25.1.0",
     "jest-emotion": "^10.0.27",
     "jest-preset-gatsby": "^1.0.27",

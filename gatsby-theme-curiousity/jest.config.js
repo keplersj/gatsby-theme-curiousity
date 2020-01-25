@@ -28,6 +28,15 @@ module.exports = {
       displayName: "lint:stylelint",
       preset: "jest-runner-stylelint",
       testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"]
+    },
+    {
+      displayName: "lint:eslint",
+      runner: "eslint",
+      testMatch: [
+        "<rootDir>/src/**/*.js",
+        "<rootDir>/src/**/*.ts",
+        "<rootDir>/src/**/*.tsx"
+      ]
     }
   ]
 };

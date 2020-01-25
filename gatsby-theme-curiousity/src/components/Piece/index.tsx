@@ -6,7 +6,7 @@ import { remarkForm, DeleteAction } from "gatsby-tinacms-remark";
 import Image, { FluidObject } from "gatsby-image";
 import { JsonLd } from "react-schemaorg";
 import { ImageObject, CreativeWork } from "schema-dts";
-import { readableColor } from "polished";
+import { readableColor as readablecolor } from "polished";
 
 const Content = styled.article`
   max-width: 55em;
@@ -37,7 +37,7 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
 
   @media screen and (max-width: 1023px) {
     :not(:last-child) {
-      :after {
+      ::after {
         content: " · ";
       }
     }
@@ -49,11 +49,11 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
     padding: 0.3em 0.45em;
 
     color: ${({ backgroundColor }) =>
-      backgroundColor && readableColor(backgroundColor)};
+      backgroundColor && readablecolor(backgroundColor)};
 
     a {
       color: ${({ backgroundColor }) =>
-        backgroundColor && readableColor(backgroundColor)};
+        backgroundColor && readablecolor(backgroundColor)};
     }
 
     ::before,

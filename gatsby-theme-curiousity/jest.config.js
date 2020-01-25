@@ -23,6 +23,11 @@ module.exports = {
       displayName: "lint:prettier",
       preset: "jest-runner-prettier",
       testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"]
+    },
+    {
+      displayName: "lint:stylelint",
+      preset: "jest-runner-stylelint",
+      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"]
     }
   ]
 };

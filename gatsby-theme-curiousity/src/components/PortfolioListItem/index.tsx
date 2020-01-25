@@ -65,7 +65,9 @@ const Info = styled.div`
   justify-content: center;
 `;
 
-export const PortfolioListItem = (props: Props): React.ReactElement<Props> => {
+export const PortfolioListItem = (
+  properties: Props
+): React.ReactElement<Props> => {
   const data = useStaticQuery<PortfolioPieceItemQuery>(graphql`
     query CuriosityPortfolioPieceItemQuery {
       site {
@@ -83,39 +85,39 @@ export const PortfolioListItem = (props: Props): React.ReactElement<Props> => {
           item={{
             "@context": "https://schema.org",
             "@type": "CreativeWork",
-            "@id": `${data.site.siteMetadata.siteUrl}${props.location}`,
-            url: `${data.site.siteMetadata.siteUrl}${props.location}`,
-            headline: props.title,
-            name: props.title,
-            mainEntityOfPage: `${data.site.siteMetadata.siteUrl}${props.location}`,
-            image: props.image && {
+            "@id": `${data.site.siteMetadata.siteUrl}${properties.location}`,
+            url: `${data.site.siteMetadata.siteUrl}${properties.location}`,
+            headline: properties.title,
+            name: properties.title,
+            mainEntityOfPage: `${data.site.siteMetadata.siteUrl}${properties.location}`,
+            image: properties.image && {
               "@type": "ImageObject",
-              "@id": `${data.site.siteMetadata.siteUrl}${props.image.src}`
+              "@id": `${data.site.siteMetadata.siteUrl}${properties.image.src}`
             }
           }}
         />
-        {props.image && (
-          <Link to={props.location}>
+        {properties.image && (
+          <Link to={properties.location}>
             <FeaturedImage>
               <JsonLd<ImageObject>
                 item={{
                   "@context": "https://schema.org",
                   "@type": "ImageObject",
-                  "@id": `${data.site.siteMetadata.siteUrl}${props.image.src}`,
+                  "@id": `${data.site.siteMetadata.siteUrl}${properties.image.src}`,
                   representativeOfPage: false,
-                  contentUrl: props.image.src,
-                  url: props.image.src
+                  contentUrl: properties.image.src,
+                  url: properties.image.src
                 }}
               />
-              <StyledImage fluid={props.image} />
+              <StyledImage fluid={properties.image} />
             </FeaturedImage>
           </Link>
         )}
         <Info>
-          <Link to={props.location}>
-            <h2>{props.title}</h2>
+          <Link to={properties.location}>
+            <h2>{properties.title}</h2>
           </Link>
-          <p>{props.description}</p>
+          <p>{properties.description}</p>
         </Info>
       </Container>
     </StyledCard>

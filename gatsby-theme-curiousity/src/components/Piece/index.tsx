@@ -77,10 +77,10 @@ interface SupportingListProps extends SupportingDetailProps {
   list?: string[];
 }
 
-const SupportingList = (props: SupportingListProps) =>
-  props.list && (
-    <SupportingDetail {...props}>
-      {props.type}: {props.list.join(", ")}
+const SupportingList = (properties: SupportingListProps) =>
+  properties.list && (
+    <SupportingDetail {...properties}>
+      {properties.type}: {properties.list.join(", ")}
       {"​\u200B"}
     </SupportingDetail>
   );
@@ -90,10 +90,10 @@ interface SupportingLinkProps extends SupportingDetailProps {
   destination?: string;
 }
 
-const SupportingLink = (props: SupportingLinkProps) =>
-  props.destination && (
-    <SupportingDetail {...props}>
-      <a href={props.destination}>{props.name}</a>
+const SupportingLink = (properties: SupportingLinkProps) =>
+  properties.destination && (
+    <SupportingDetail {...properties}>
+      <a href={properties.destination}>{properties.name}</a>
       {"​\u200B"}
     </SupportingDetail>
   );

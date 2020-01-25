@@ -1,7 +1,7 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
 import { useStaticQuery } from "gatsby";
-import { PortfolioListItem } from "./";
+import { PortfolioListItem } from ".";
 import { CuriosityPortfolioPieceItemQuery } from "../../__mockData__";
 
 describe("Portfolio List Item Component", () => {

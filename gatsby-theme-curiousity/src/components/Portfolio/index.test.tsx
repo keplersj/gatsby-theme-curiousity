@@ -1,7 +1,7 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
 import { useStaticQuery } from "gatsby";
-import Portfolio from "./";
+import Portfolio from ".";
 import deepMerge from "deepmerge";
 import {
   CuriousityBaseLayoutData,

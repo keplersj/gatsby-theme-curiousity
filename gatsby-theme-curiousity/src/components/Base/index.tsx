@@ -20,7 +20,7 @@ interface Props {
 }
 
 const BaseLayout = (
-  props: React.PropsWithChildren<Props>
+  properties: React.PropsWithChildren<Props>
 ): React.ReactElement<React.PropsWithChildren<Props>> => {
   const data = useStaticQuery<BaseLayoutData>(graphql`
     query CuriousityBaseLayoutData {
@@ -40,25 +40,25 @@ const BaseLayout = (
         defaultTitle={data.site.siteMetadata.title}
       >
         <html lang="en" />
-        {props.title && <title>{props.title}</title>}
-        {props.description && (
-          <meta name="description" content={props.description} />
+        {properties.title && <title>{properties.title}</title>}
+        {properties.description && (
+          <meta name="description" content={properties.description} />
         )}
         <meta
           property="og:title"
           content={
-            (props.title &&
-              `${props.title} | ${data.site.siteMetadata.title}`) ||
+            (properties.title &&
+              `${properties.title} | ${data.site.siteMetadata.title}`) ||
             data.site.siteMetadata.title
           }
         />
         <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
-        {props.description && (
-          <meta property="og:description" content={props.description} />
+        {properties.description && (
+          <meta property="og:description" content={properties.description} />
         )}
       </Helmet>
 
-      {props.children}
+      {properties.children}
     </main>
   );
 };

@@ -7336,17 +7336,14 @@ gatsby-tinacms-git@^0.2.18:
     "@tinacms/api-git" "^0.5.4"
     "@tinacms/git-client" "^0.4.1"
 
-gatsby-tinacms-remark@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.6.4.tgz#00e0740ba7ad86ca1e0a5375b37cb2b91b65b9b8"
-  integrity sha512-ct0jWA/fzmGf5j/gBzKH5jAunx2mYATvm9Y7+zWvXyqH3iXA63uEyc5OU9st1SojqvVW5nZ17miMx5OYaBYHpg==
+gatsby-tinacms-remark@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.7.0.tgz#ca9e77d3b875b46cd55512e2c3da58a578b7fc97"
+  integrity sha512-Gk8VTJDmQm4ROYP5FVl9iDRSiltKoS6fByo3jj3w111o8Ij7WKR541tlTMJaXS2Y97Uf3HYHThaYkD+PXMlszA==
   dependencies:
-    "@tinacms/core" "^0.6.1"
-    "@tinacms/form-builder" "^0.2.12"
     gray-matter "^4.0.2"
-    lodash.get "^4.4.2"
+    js-yaml "^3.13.1"
     slash "^3.0.0"
-    tinacms "^0.11.3"
 
 gatsby-transformer-remark@^2.6.48:
   version "2.6.48"

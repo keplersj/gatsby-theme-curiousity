@@ -49,7 +49,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
 
   createTypes(`type PortfolioItemMetadata {
-    id: ID!
     type: [String]
     homepage: String
     githubRepo: String
@@ -92,7 +91,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
     schema.buildObjectType({
       name: "RemarkPortfolioItem",
       fields: {
-        id: { type: "ID!" },
         title: {
           type: "String!"
         },

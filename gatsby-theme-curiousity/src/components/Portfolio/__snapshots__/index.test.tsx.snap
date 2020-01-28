@@ -24,20 +24,14 @@ exports[`Portfolio Page Component renders as expected 1`] = `
 }
 
 .emotion-2 {
-  --starstuff-card-default-background-color: 245,245,245;
-  --starstuff-card-default-shadow-color: 10,10,10;
   border-radius: 10px;
   margin: 1em;
   background-color: rgba(var(--starstuff-card-default-background-color),0.5);
   box-shadow: 0.5em 0.5em 0.75em rgba(var(--starstuff-card-default-shadow-color),0.3);
   -webkit-transition: box-shadow 1s;
   transition: box-shadow 1s;
-}
-
-@media screen and (prefers-color-scheme:dark) {
-  .emotion-2 {
-    --starstuff-card-default-background-color: 55,55,55;
-  }
+  --starstuff-card-default-background-color: 245,245,245;
+  --starstuff-card-default-shadow-color: 10,10,10;
 }
 
 .emotion-2:active,
@@ -45,6 +39,12 @@ exports[`Portfolio Page Component renders as expected 1`] = `
 .emotion-2:focus-within,
 .emotion-2:hover {
   box-shadow: 0.8em 0.8em 1em rgba(var(--starstuff-card-default-shadow-color),0.4);
+}
+
+@media screen and (prefers-color-scheme:dark) {
+  .emotion-2 {
+    --starstuff-card-default-background-color: 55,55,55;
+  }
 }
 
 @media screen and (min-width:1024px) {

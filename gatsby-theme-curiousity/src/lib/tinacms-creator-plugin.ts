@@ -10,5 +10,5 @@ export const CreatePiecePlugin = new RemarkCreatorPlugin({
   frontmatter: form => ({
     title: form.title
   }),
-  body: form => `This is a new portfolio piece. Please write some content.`
+  body: () => `This is a new portfolio piece. Please write some content.`
 });

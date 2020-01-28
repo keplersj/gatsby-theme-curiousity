@@ -86,6 +86,10 @@
     ]
   },
   "eslintConfig": {
-    "extends": "starstuff/auto"
+    "extends": "starstuff/auto",
+    "env": {
+      "node": true,
+      "browser": true
+    }
   }
 }

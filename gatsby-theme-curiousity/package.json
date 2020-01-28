@@ -28,7 +28,7 @@
     "@types/react-test-renderer": "^16.9.2",
     "deepmerge": "^4.2.2",
     "eslint": "^6.8.0",
-    "eslint-config-starstuff": "^1.2.3",
+    "eslint-config-starstuff": "^1.4.2",
     "gatsby": "^2.19.7",
     "jest": "^25.1.0",
     "jest-emotion": "^10.0.27",
@@ -86,6 +86,10 @@
     ]
   },
   "eslintConfig": {
-    "extends": "starstuff/auto"
+    "extends": "starstuff/auto",
+    "env": {
+      "node": true,
+      "browser": true
+    }
   }
 }

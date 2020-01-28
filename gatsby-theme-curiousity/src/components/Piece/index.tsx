@@ -268,7 +268,7 @@ export default remarkForm(ProjectPageTemplate, {
       name: "frontmatter.featured_image",
       component: "image",
       parse: filename => `../assets/${filename}`,
-      uploadDir: piece => "/content/assets/",
+      uploadDir: () => "/content/assets/",
       previewSrc: ({ frontmatter }) =>
         frontmatter.featured_image?.childImageSharp.fluid.src
     } as any,

@@ -1,28 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Base Layout renders as expected 1`] = `
-<head>
-  Object {}
-  Object {
-    "lang": "en",
-  }
-  <meta
-    content="Test Site"
-    data-react-helmet={true}
-    property="og:title"
-  />
-  <meta
-    content="https://example.dev/"
-    data-react-helmet={true}
-    property="og:url"
-  />
-  <title
-    data-react-helmet={true}
-  >
-    Test Site
-  </title>
-</head>
+<html
+  lang="en"
+>
+  <head>
+    <meta
+      content="Test Site"
+      data-rh={true}
+      property="og:title"
+    />
+    <meta
+      content="https://example.dev/"
+      data-rh={true}
+      property="og:url"
+    />
+    <title
+      data-rh={true}
+    >
+      Test Site
+    </title>
+  </head>
+  <body />
+</html>
+`;
 
+exports[`Base Layout renders as expected 2`] = `
 <main>
   <div>
     <span>

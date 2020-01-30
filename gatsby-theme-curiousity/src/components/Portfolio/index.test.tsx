@@ -1,5 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
+import { HelmetProvider } from "react-helmet-async";
 import { useStaticQuery } from "gatsby";
 import Portfolio from ".";
 import deepMerge from "deepmerge";
@@ -16,10 +17,16 @@ describe("Portfolio Page Component", () => {
   });
 
   it("renders as expected", () => {
+    const helmetContext: { helmet?: object } = {};
     const tree = renderer
-      .create(<Portfolio data={CuriousityPortfolioPageQuery} />)
+      .create(
+        <HelmetProvider context={helmetContext}>
+          <Portfolio data={CuriousityPortfolioPageQuery} />
+        </HelmetProvider>
+      )
       .toJSON();
 
+    expect(helmetContext.helmet).toMatchSnapshot();
     expect(tree).toMatchSnapshot();
   });
 });

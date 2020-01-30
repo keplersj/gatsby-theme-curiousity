@@ -1,6 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Portfolio Piece Template renders as expected 1`] = `
+<html
+  lang="en"
+>
+  <head>
+    <meta
+      content="test excerpt"
+      data-rh={true}
+      name="description"
+    />
+    <meta
+      content="Test Piece | Test Site"
+      data-rh={true}
+      property="og:title"
+    />
+    <meta
+      content="https://example.dev/"
+      data-rh={true}
+      property="og:url"
+    />
+    <meta
+      content="test excerpt"
+      data-rh={true}
+      property="og:description"
+    />
+    <title
+      data-rh={true}
+    >
+      Test Piece | Test Site
+    </title>
+  </head>
+  <body />
+</html>
+`;
+
+exports[`Portfolio Piece Template renders as expected 2`] = `
 .emotion-8 {
   max-width: 55em;
   margin-left: auto;
@@ -296,38 +331,6 @@ exports[`Portfolio Piece Template renders as expected 1`] = `
     white-space: nowrap;
   }
 }
-
-<head>
-  Object {}
-  Object {
-    "lang": "en",
-  }
-  <meta
-    content="test excerpt"
-    data-react-helmet={true}
-    name="description"
-  />
-  <meta
-    content="Test Piece | Test Site"
-    data-react-helmet={true}
-    property="og:title"
-  />
-  <meta
-    content="https://example.dev/"
-    data-react-helmet={true}
-    property="og:url"
-  />
-  <meta
-    content="test excerpt"
-    data-react-helmet={true}
-    property="og:description"
-  />
-  <title
-    data-react-helmet={true}
-  >
-    Test Piece | Test Site
-  </title>
-</head>
 
 <main>
   <article

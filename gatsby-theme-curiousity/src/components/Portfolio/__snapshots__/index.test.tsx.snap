@@ -1,6 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Portfolio Page Component renders as expected 1`] = `
+<html
+  lang="en"
+>
+  <head>
+    <meta
+      content="Projects | Test Site"
+      data-rh={true}
+      property="og:title"
+    />
+    <meta
+      content="https://example.dev/"
+      data-rh={true}
+      property="og:url"
+    />
+    <title
+      data-rh={true}
+    >
+      Projects | Test Site
+    </title>
+  </head>
+  <body />
+</html>
+`;
+
+exports[`Portfolio Page Component renders as expected 2`] = `
 .emotion-4 {
   margin-left: 2em;
   margin-right: 2em;
@@ -95,28 +120,6 @@ exports[`Portfolio Page Component renders as expected 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
 }
-
-<head>
-  Object {}
-  Object {
-    "lang": "en",
-  }
-  <meta
-    content="Projects | Test Site"
-    data-react-helmet={true}
-    property="og:title"
-  />
-  <meta
-    content="https://example.dev/"
-    data-react-helmet={true}
-    property="og:url"
-  />
-  <title
-    data-react-helmet={true}
-  >
-    Projects | Test Site
-  </title>
-</head>
 
 <main>
   <div

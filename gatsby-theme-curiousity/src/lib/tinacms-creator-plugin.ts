@@ -3,12 +3,13 @@ import slugify from "slugify";
 
 export const CreatePiecePlugin = new RemarkCreatorPlugin({
   label: "New Portfolio Piece",
-  filename: form => {
+  filename: (form): string => {
     return `content/portfolio/${slugify(form.title, { lower: true })}.md`;
   },
   fields: [{ name: "title", label: "Title", component: "text" }],
-  frontmatter: form => ({
+  frontmatter: (form): object => ({
     title: form.title
   }),
-  body: () => `This is a new portfolio piece. Please write some content.`
+  body: (): string =>
+    `This is a new portfolio piece. Please write some content.`
 });

@@ -33,10 +33,11 @@ module.exports = {
       displayName: "lint:eslint",
       runner: "eslint",
       testMatch: [
-        "<rootDir>/src/**/*.js",
-        "<rootDir>/src/**/*.ts",
-        "<rootDir>/src/**/*.tsx"
-      ]
+        "<rootDir>/**/*.js",
+        "<rootDir>/**/*.ts",
+        "<rootDir>/**/*.tsx"
+      ],
+      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"]
     }
   ]
 };

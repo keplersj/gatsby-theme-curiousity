@@ -1,5 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withDefaults = require("./utils/default-options");
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 module.exports = themeOptions => {
   const options = withDefaults(themeOptions);
   const { remark = true } = themeOptions;

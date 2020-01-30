@@ -1,32 +1,35 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs");
 const path = require("path");
 const mkdirp = require("mkdirp");
 const crypto = require("crypto");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { urlResolve } = require("gatsby-core-utils");
-
 const withDefaults = require("./utils/default-options");
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 // Ensure that content directories exist at site-level
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.onPreBootstrap = ({ store }, themeOptions) => {
   const { program } = store.getState();
   const { contentPath, assetPath } = withDefaults(themeOptions);
 
-  const dirs = [
+  const directories = [
     path.join(program.directory, contentPath),
     path.join(program.directory, assetPath)
   ];
 
-  dirs.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      mkdirp.sync(dir);
+  directories.forEach(directory => {
+    if (!fs.existsSync(directory)) {
+      mkdirp.sync(directory);
     }
   });
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const remarkResolverPassthrough = fieldName => async (
   source,
-  args,
+  arguments_,
   context,
   info
 ) => {
@@ -36,7 +39,7 @@ const remarkResolverPassthrough = fieldName => async (
   });
   if (type.getFields()[fieldName].extensions.needsResolve) {
     const resolver = type.getFields()[fieldName].resolve;
-    const result = await resolver(remarkNode, args, context, {
+    const result = await resolver(remarkNode, arguments_, context, {
       fieldName
     });
     return result;
@@ -45,6 +48,7 @@ const remarkResolverPassthrough = fieldName => async (
   }
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
 
@@ -132,10 +136,11 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         },
         metadata: {
           type: "PortfolioItemMetadata!",
-          resolve: async (source, args, context, info) => {
+          // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+          resolve: async (source, arguments_, context, info) => {
             const frontmatter = await remarkResolverPassthrough("frontmatter")(
               source,
-              args,
+              arguments_,
               context,
               info
             );
@@ -175,6 +180,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
 // Create fields for piece slugs and source
 // This will change with schema customization with work
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.onCreateNode = async (
   { node, actions, getNode, createNodeId },
   themeOptions
@@ -248,6 +254,7 @@ exports.onCreateNode = async (
 const PieceTemplate = require.resolve("./src/templates/piece-query.ts");
 const PortfolioTemplate = require.resolve("./src/templates/portfolio-query.ts");
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
   const { createPage } = actions;
   const { basePath } = withDefaults(themeOptions);
@@ -274,7 +281,7 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
   const pieces = allPortfolioItem.edges;
 
   // Create a page for each Piece
-  pieces.forEach(({ node: piece }, index) => {
+  pieces.forEach(({ node: piece }) => {
     const { slug } = piece;
     createPage({
       path: slug,

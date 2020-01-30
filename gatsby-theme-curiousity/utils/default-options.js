@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 module.exports = themeOptions => {
   const basePath = themeOptions.basePath || `/`;
   const contentPath = themeOptions.contentPath || `content/portfolio`;

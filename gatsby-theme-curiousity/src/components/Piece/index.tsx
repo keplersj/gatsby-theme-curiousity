@@ -48,11 +48,13 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
     position: relative;
     padding: 0.3em 0.45em;
 
-    color: ${({ backgroundColor }) =>
+    color: ${({ backgroundColor }: SupportingDetailProps): string | undefined =>
       backgroundColor && readablecolor(backgroundColor)};
 
     a {
-      color: ${({ backgroundColor }) =>
+      color: ${({
+        backgroundColor
+      }: SupportingDetailProps): string | undefined =>
         backgroundColor && readablecolor(backgroundColor)};
     }
 
@@ -63,7 +65,9 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
       width: 100%;
       height: 100%;
       transform: skew(20deg);
-      background-color: ${({ backgroundColor }) => backgroundColor};
+      background-color: ${({
+        backgroundColor
+      }: SupportingDetailProps): string | undefined => backgroundColor};
       z-index: -1;
       content: "";
       position: absolute;
@@ -77,7 +81,9 @@ interface SupportingListProps extends SupportingDetailProps {
   list?: string[];
 }
 
-const SupportingList = (properties: SupportingListProps) =>
+const SupportingList = (
+  properties: SupportingListProps
+): React.ReactElement<SupportingListProps> =>
   properties.list && (
     <SupportingDetail {...properties}>
       {properties.type}: {properties.list.join(", ")}
@@ -90,7 +96,9 @@ interface SupportingLinkProps extends SupportingDetailProps {
   destination?: string;
 }
 
-const SupportingLink = (properties: SupportingLinkProps) =>
+const SupportingLink = (
+  properties: SupportingLinkProps
+): React.ReactElement<SupportingLinkProps> =>
   properties.destination && (
     <SupportingDetail {...properties}>
       <a href={properties.destination}>{properties.name}</a>

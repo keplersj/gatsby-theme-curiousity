@@ -4,7 +4,7 @@ export const remarkForm = jest.fn().mockImplementation(component => component);
 
 export const RemarkCreatorPlugin = gatsbyTinaCMSRemark.RemarkCreatorPlugin;
 
-const initialDataInHook = initialData => [initialData];
+const initialDataInHook = <T>(initialData: T): [T] => [initialData];
 
 export const useLocalRemarkForm = jest.fn(initialDataInHook);
 

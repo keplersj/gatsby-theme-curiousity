@@ -38,7 +38,7 @@ module.exports = themeOptions => {
         }
       },
       "gatsby-plugin-emotion",
-      "gatsby-plugin-react-helmet",
+      "gatsby-plugin-react-helmet-async",
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
       "gatsby-plugin-typescript"

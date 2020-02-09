@@ -6,7 +6,7 @@ import { remarkForm, DeleteAction } from "gatsby-tinacms-remark";
 import Image, { FluidObject } from "gatsby-image";
 import { JsonLd } from "react-schemaorg";
 import { ImageObject, CreativeWork } from "schema-dts";
-import { readableColor as readablecolor } from "polished";
+import { readableColor } from "polished";
 
 const Content = styled.article`
   max-width: 55em;
@@ -48,15 +48,18 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
     position: relative;
     padding: 0.3em 0.45em;
 
+    /* stylelint-disable value-keyword-case */
+    /* stylelint-disable function-name-case */
     color: ${({ backgroundColor }: SupportingDetailProps): string | undefined =>
-      backgroundColor && readablecolor(backgroundColor)};
+      backgroundColor && readableColor(backgroundColor)};
 
     a {
       color: ${({
         backgroundColor
       }: SupportingDetailProps): string | undefined =>
-        backgroundColor && readablecolor(backgroundColor)};
+        backgroundColor && readableColor(backgroundColor)};
     }
+    /* stylelint-enable function-name-case */
 
     ::before,
     ::after {
@@ -73,6 +76,7 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
       position: absolute;
       white-space: nowrap;
     }
+    /* stylelint-enable value-keyword-case */
   }
 `;
 

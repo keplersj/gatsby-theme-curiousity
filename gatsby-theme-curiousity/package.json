@@ -73,7 +73,7 @@
     "starstuff-style": "^1.1.1",
     "styled-components": "^5.0.1",
     "tinacms": "^0.13.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.2"
   },
   "peerDependencies": {
     "gatsby": "^2.13.13",

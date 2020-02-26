@@ -41,7 +41,7 @@
     "jest-transform-stub": "^2.0.0",
     "prettier": "^1.18.2",
     "react": "^16.13.0",
-    "react-dom": "^16.10.1",
+    "react-dom": "^16.13.0",
     "react-test-renderer": "^16.13.0",
     "semantic-release": "^17.0.4",
     "stylelint": "^13.2.0",

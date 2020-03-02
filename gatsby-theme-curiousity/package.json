@@ -52,7 +52,7 @@
     "@types/react": "^16.9.23",
     "@types/react-helmet": "^5.0.15",
     "gatsby-core-utils": "^1.0.28",
-    "gatsby-image": "^2.2.41",
+    "gatsby-image": "^2.2.42",
     "gatsby-plugin-emotion": "^4.1.22",
     "gatsby-plugin-react-helmet-async": "^1.0.15",
     "gatsby-plugin-sharp": "^2.4.5",

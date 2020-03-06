@@ -55,7 +55,7 @@
     "gatsby-image": "^2.2.42",
     "gatsby-plugin-emotion": "^4.1.23",
     "gatsby-plugin-react-helmet-async": "^1.0.15",
-    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-plugin-sharp": "^2.4.6",
     "gatsby-plugin-tinacms": "^0.1.26",
     "gatsby-plugin-typescript": "^2.2.0",
     "gatsby-source-filesystem": "^2.1.48",

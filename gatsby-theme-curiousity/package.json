@@ -29,7 +29,7 @@
     "deepmerge": "^4.2.2",
     "eslint": "^6.8.0",
     "eslint-config-starstuff": "^1.4.39",
-    "gatsby": "^2.19.43",
+    "gatsby": "^2.19.45",
     "jest": "^25.1.0",
     "jest-emotion": "^10.0.32",
     "jest-preset-gatsby": "^1.0.36",

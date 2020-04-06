@@ -7495,10 +7495,10 @@ gatsby-tinacms-git@^0.4.6:
     "@tinacms/api-git" "^0.7.0"
     "@tinacms/git-client" "^0.6.5"
 
-gatsby-tinacms-remark@^0.7.11:
-  version "0.7.11"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.7.11.tgz#46e5e32c2ee169584ce84be7ac8eb2087d498aec"
-  integrity sha512-fa+nNIty+3qppG7mP+jxXwk5+i1zAyUNkjKjKiqJxnl6ejXKbrih1v6N7cpxx4s1lnbOfm7eUaaJFF8hdCwmPQ==
+gatsby-tinacms-remark@^0.7.12:
+  version "0.7.12"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.7.12.tgz#6ff079fe22065a198675632f70e8b8acf81ab2a3"
+  integrity sha512-X7JBgbvzEXiY3ViuSyjL4mL3PZ21FlU5Wisi/eS7CPScRIuqzqdGguRlNlaQNjQY1tOfUVq/hjr913WlEQUszw==
   dependencies:
     gray-matter "^4.0.2"
     js-yaml "^3.13.1"

@@ -71,7 +71,7 @@
     "slugify": "^1.4.0",
     "starstuff-components": "^2.1.2",
     "starstuff-style": "^1.1.2",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.1.0",
     "tinacms": "^0.18.2",
     "typescript": "^3.8.3"
   },

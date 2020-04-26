@@ -8,8 +8,8 @@ export const CreatePiecePlugin = new RemarkCreatorPlugin({
   },
   fields: [{ name: "title", label: "Title", component: "text" }],
   frontmatter: (form): object => ({
-    title: form.title
+    title: form.title,
   }),
   body: (): string =>
-    `This is a new portfolio piece. Please write some content.`
+    `This is a new portfolio piece. Please write some content.`,
 });

@@ -15,10 +15,10 @@ export const CuriousityPiecePage: PiecePage = {
     homepage: "https://example.dev/",
     rubygemsGemName: "test",
     npmPackageName: "test",
-    githubRepo: "test/test"
+    githubRepo: "test/test",
   },
   fileRelativePath: "",
   rawFrontmatter: "",
   rawMarkdownBody: "",
-  frontmatter: {}
+  frontmatter: {},
 };

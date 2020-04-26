@@ -8,26 +8,26 @@ module.exports = {
       snapshotSerializers: [
         "jest-emotion",
         "jest-serializer-react-helmet-async",
-        "jest-serializer-json-ld-script"
+        "jest-serializer-json-ld-script",
       ],
       coveragePathIgnorePatterns: [
         "/node_modules/",
-        "<rootDir>/src/__mockData__/"
+        "<rootDir>/src/__mockData__/",
       ],
       moduleNameMapper: {
         "modern-normalize": "jest-transform-stub",
-        "starstuff-style": "jest-transform-stub"
-      }
+        "starstuff-style": "jest-transform-stub",
+      },
     },
     {
       displayName: "lint:prettier",
       preset: "jest-runner-prettier",
-      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"]
+      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"],
     },
     {
       displayName: "lint:stylelint",
       preset: "jest-runner-stylelint",
-      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"]
+      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"],
     },
     {
       displayName: "lint:eslint",
@@ -35,9 +35,9 @@ module.exports = {
       testMatch: [
         "<rootDir>/**/*.js",
         "<rootDir>/**/*.ts",
-        "<rootDir>/**/*.tsx"
+        "<rootDir>/**/*.tsx",
       ],
-      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"]
-    }
-  ]
+      testPathIgnorePatterns: ["/coverage/", "/node_modules/", "/reports/"],
+    },
+  ],
 };

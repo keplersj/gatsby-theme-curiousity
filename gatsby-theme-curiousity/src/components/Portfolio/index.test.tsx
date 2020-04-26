@@ -6,7 +6,7 @@ import Portfolio from ".";
 import deepMerge from "deepmerge";
 import {
   CuriousityBaseLayoutData,
-  CuriousityPortfolioPageQuery
+  CuriousityPortfolioPageQuery,
 } from "../../__mockData__";
 
 describe("Portfolio Page Component", () => {

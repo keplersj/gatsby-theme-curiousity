@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-module.exports = themeOptions => {
+module.exports = (themeOptions) => {
   const basePath = themeOptions.basePath || `/`;
   const contentPath = themeOptions.contentPath || `content/portfolio`;
   const assetPath = themeOptions.assetPath || `content/assets`;
@@ -7,6 +7,6 @@ module.exports = themeOptions => {
   return {
     basePath,
     contentPath,
-    assetPath
+    assetPath,
   };
 };

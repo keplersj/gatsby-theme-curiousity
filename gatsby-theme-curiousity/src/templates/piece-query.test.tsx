@@ -7,7 +7,7 @@ import deepMerge from "deepmerge";
 import {
   CuriousityBaseLayoutData,
   CuriosityPostQuery,
-  CuriousityPiecePageQuery
+  CuriousityPiecePageQuery,
 } from "../__mockData__";
 
 describe("Portfolio Piece Template", () => {

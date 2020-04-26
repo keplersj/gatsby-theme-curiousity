@@ -49,9 +49,9 @@ exports[`Portfolio Page Component renders as expected 2`] = `
 }
 
 .emotion-2 {
-  border-radius: 10px;
   margin: 1em;
   background-color: rgba(var(--starstuff-card-default-background-color),0.5);
+  border-radius: 10px;
   box-shadow: 0.5em 0.5em 0.75em rgba(var(--starstuff-card-default-shadow-color),0.3);
   -webkit-transition: box-shadow 1s;
   transition: box-shadow 1s;

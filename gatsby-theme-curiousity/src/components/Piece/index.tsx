@@ -55,7 +55,7 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
 
     a {
       color: ${({
-        backgroundColor
+        backgroundColor,
       }: SupportingDetailProps): string | undefined =>
         backgroundColor && readableColor(backgroundColor)};
     }
@@ -69,7 +69,7 @@ const SupportingDetail = styled.span<SupportingDetailProps>`
       height: 100%;
       transform: skew(20deg);
       background-color: ${({
-        backgroundColor
+        backgroundColor,
       }: SupportingDetailProps): string | undefined => backgroundColor};
       z-index: -1;
       content: "";
@@ -164,7 +164,7 @@ interface Props extends PageRendererProps {
 
 const ProjectPageTemplate = ({
   data: { portfolioItem: piece },
-  location
+  location,
 }: Props): React.ReactElement<Props> => {
   const staticQuery = useStaticQuery<PostQuery>(graphql`
     query CuriosityPostQuery {
@@ -190,8 +190,8 @@ const ProjectPageTemplate = ({
             mainEntityOfPage: `${staticQuery.site.siteMetadata.siteUrl}${location.pathname}`,
             image: piece.featuredImage && {
               "@type": "ImageObject",
-              "@id": `${staticQuery.site.siteMetadata.siteUrl}${piece.featuredImage.childImageSharp.fluid.src}`
-            }
+              "@id": `${staticQuery.site.siteMetadata.siteUrl}${piece.featuredImage.childImageSharp.fluid.src}`,
+            },
           }}
         />
         <header>
@@ -251,7 +251,7 @@ const ProjectPageTemplate = ({
                   "@id": `${staticQuery.site.siteMetadata.siteUrl}${piece.featuredImage.childImageSharp.fluid.src}`,
                   representativeOfPage: true,
                   contentUrl: piece.featuredImage.childImageSharp.fluid.src,
-                  url: piece.featuredImage.childImageSharp.fluid.src
+                  url: piece.featuredImage.childImageSharp.fluid.src,
                 }}
               />
               <Image fluid={piece.featuredImage.childImageSharp.fluid} />
@@ -273,24 +273,24 @@ export default remarkForm(ProjectPageTemplate, {
       label: "Title",
       name: "frontmatter.title",
       description: "Enter the title of the post here",
-      component: "text"
+      component: "text",
     },
     {
       label: "Featured Image",
       name: "frontmatter.featured_image",
       component: "image",
-      parse: filename => `../assets/${filename}`,
+      parse: (filename) => `../assets/${filename}`,
       uploadDir: () => "/content/assets/",
       previewSrc: ({ frontmatter }) =>
-        frontmatter.featured_image?.childImageSharp.fluid.src
+        frontmatter.featured_image?.childImageSharp.fluid.src,
     } as any,
     {
       name: "rawMarkdownBody",
       component: "markdown",
       label: "Piece Body",
-      description: "Edit the body of the post here"
-    }
-  ]
+      description: "Edit the body of the post here",
+    },
+  ],
 });
 
 export const fragment = graphql`

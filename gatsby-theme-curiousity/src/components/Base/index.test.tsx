@@ -8,7 +8,7 @@ import { CuriousityBaseLayoutData } from "../../__mockData__";
 describe("Base Layout", () => {
   beforeEach(() => {
     (useStaticQuery as jest.Mock).mockImplementation((): object => ({
-      ...CuriousityBaseLayoutData
+      ...CuriousityBaseLayoutData,
     }));
   });
 

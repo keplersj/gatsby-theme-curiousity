@@ -4,7 +4,7 @@ const REPO_ABSOLUTE_PATH = path.join(process.cwd(), "..");
 module.exports = {
   siteMetadata: {
     title: "Example Site",
-    siteUrl: "https://example.dev"
+    siteUrl: "https://example.dev",
   },
   plugins: [
     {
@@ -15,12 +15,12 @@ module.exports = {
             resolve: "gatsby-tinacms-git",
             options: {
               pathToRepo: REPO_ABSOLUTE_PATH,
-              pathToContent: "example"
-            }
-          }
-        ]
-      }
+              pathToContent: "example",
+            },
+          },
+        ],
+      },
     },
-    "gatsby-theme-curiousity"
-  ]
+    "gatsby-theme-curiousity",
+  ],
 };

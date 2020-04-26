@@ -16,10 +16,10 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
 
   const directories = [
     path.join(program.directory, contentPath),
-    path.join(program.directory, assetPath)
+    path.join(program.directory, assetPath),
   ];
 
-  directories.forEach(directory => {
+  directories.forEach((directory) => {
     if (!fs.existsSync(directory)) {
       mkdirp.sync(directory);
     }
@@ -27,7 +27,7 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-const remarkResolverPassthrough = fieldName => async (
+const remarkResolverPassthrough = (fieldName) => async (
   source,
   arguments_,
   context,
@@ -35,12 +35,12 @@ const remarkResolverPassthrough = fieldName => async (
 ) => {
   const type = info.schema.getType("MarkdownRemark");
   const remarkNode = context.nodeModel.getNodeById({
-    id: source.parent
+    id: source.parent,
   });
   if (type.getFields()[fieldName].extensions.needsResolve) {
     const resolver = type.getFields()[fieldName].resolve;
     const result = await resolver(remarkNode, arguments_, context, {
-      fieldName
+      fieldName,
     });
     return result;
   } else {
@@ -96,10 +96,10 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       name: "RemarkPortfolioItem",
       fields: {
         title: {
-          type: "String!"
+          type: "String!",
         },
         slug: {
-          type: "String!"
+          type: "String!",
         },
         tags: { type: "[String]!" },
         keywords: { type: "[String]!" },
@@ -108,31 +108,31 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           args: {
             pruneLength: {
               type: "Int",
-              defaultValue: 140
-            }
+              defaultValue: 140,
+            },
           },
-          resolve: remarkResolverPassthrough("excerpt")
+          resolve: remarkResolverPassthrough("excerpt"),
         },
         html: {
           type: "String!",
-          resolve: remarkResolverPassthrough("html")
+          resolve: remarkResolverPassthrough("html"),
         },
         featuredImage: { type: "File", extensions: { fileByRelativePath: {} } },
         fileRelativePath: {
           type: "String!",
-          resolve: remarkResolverPassthrough("fileRelativePath")
+          resolve: remarkResolverPassthrough("fileRelativePath"),
         },
         rawFrontmatter: {
           type: "String!",
-          resolve: remarkResolverPassthrough("rawFrontmatter")
+          resolve: remarkResolverPassthrough("rawFrontmatter"),
         },
         rawMarkdownBody: {
           type: "String!",
-          resolve: remarkResolverPassthrough("rawMarkdownBody")
+          resolve: remarkResolverPassthrough("rawMarkdownBody"),
         },
         frontmatter: {
           type: "MarkdownRemarkFrontmatter",
-          resolve: remarkResolverPassthrough("frontmatter")
+          resolve: remarkResolverPassthrough("frontmatter"),
         },
         metadata: {
           type: "PortfolioItemMetadata!",
@@ -168,12 +168,12 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
                   ? frontmatter.status
                   : undefined,
               role:
-                frontmatter && frontmatter.role ? frontmatter.role : undefined
+                frontmatter && frontmatter.role ? frontmatter.role : undefined,
             };
-          }
-        }
+          },
+        },
       },
-      interfaces: ["Node", "PortfolioItem"]
+      interfaces: ["Node", "PortfolioItem"],
     })
   );
 };
@@ -211,7 +211,7 @@ exports.onCreateNode = async (
       const filePath = createFilePath({
         node: fileNode,
         getNode,
-        basePath: contentPath
+        basePath: contentPath,
       });
 
       slug = urlResolve(basePath, filePath);
@@ -221,7 +221,7 @@ exports.onCreateNode = async (
       tags: node.frontmatter.tags || [],
       slug,
       keywords: node.frontmatter.keywords || [],
-      featuredImage: node.frontmatter.featured_image
+      featuredImage: node.frontmatter.featured_image,
     };
 
     const remarkPortfolioPieceId = createNodeId(
@@ -240,12 +240,12 @@ exports.onCreateNode = async (
           .update(JSON.stringify(fieldData))
           .digest("hex"),
         content: JSON.stringify(fieldData),
-        description: "Remark implementation of the PortfolioItem interface"
-      }
+        description: "Remark implementation of the PortfolioItem interface",
+      },
     });
     createParentChildLink({
       parent: node,
-      child: getNode(remarkPortfolioPieceId)
+      child: getNode(remarkPortfolioPieceId),
     });
   }
 };
@@ -287,8 +287,8 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
       path: slug,
       component: PieceTemplate,
       context: {
-        id: piece.id
-      }
+        id: piece.id,
+      },
     });
   });
 
@@ -296,6 +296,6 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
   createPage({
     path: basePath,
     component: PortfolioTemplate,
-    context: {}
+    context: {},
   });
 };

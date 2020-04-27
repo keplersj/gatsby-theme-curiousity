@@ -7522,12 +7522,12 @@ gatsby-page-utils@^0.1.4:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-emotion@^4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.2.3.tgz#7b0f8c40c428b3926699699c1bce606117c53ace"
-  integrity sha512-RXkfO5kciogZrpF4/jyQwDcF4g2qdh9qDuagRMdRse887MVqKb+VG+x0KRx+0cg7cGiyg8xOfbTplBB+E0Z88A==
+gatsby-plugin-emotion@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.3.0.tgz#3918806731b5df7a094e93e66ddc96acd1da0ae3"
+  integrity sha512-e4Z+xaaRdkmMY1qmTnNPzSJYkP/M9fOYm9mE/2sssDWvH5UwlmDPUMxMuDxDO722mbbB9RGEHxX4ElrsXH7Gcg==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
     "@emotion/babel-preset-css-prop" "^10.0.27"
 
 gatsby-plugin-page-creator@^2.2.4:
@@ -14196,7 +14196,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.13, postcss@^7.0.14, postcss@^7.0.1
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-potrace@^2.1.5, potrace@^2.1.6:
+potrace@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/potrace/-/potrace-2.1.6.tgz#687d48d4441eebca9539f4c39f6815b6e2480e67"
   integrity sha512-sXdIDGZAb3x1GSnyps7VxksRoy57/ch+kq7J79L5UPUHU5KRIJF9oLJQeRVyYlOPjois+gMxVfNJkQjSkK9xMA==

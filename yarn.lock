@@ -7784,12 +7784,12 @@ gatsby-plugin-sharp@^2.6.2:
     svgo "1.3.2"
     uuid "^3.4.0"
 
-gatsby-plugin-tinacms@^0.1.36:
-  version "0.1.36"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.36.tgz#6e0f7a80d5c06fe1dc859dd15cdb65c0db8c7ae3"
-  integrity sha512-h05V304PjKp2b2QQcUQswceHliG3Qa9aJIV3Qf+CH2ojX59ebFlD4t9B/xdbzb5qgQ5alpwBV4KvasQSNQux0w==
+gatsby-plugin-tinacms@^0.1.37:
+  version "0.1.37"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.37.tgz#3c3af8c3e9f35232b3c03c0df2eeda03e392610f"
+  integrity sha512-oeGNSf4gf93LKeqHSOZGXl+Q4Yz0aPZmys4FPTa8P9HaoH1nWpMXeOx6RIUFbytyLHGS6bJJJDlr7aiL/GiAsg==
   dependencies:
-    tinacms "^0.19.2"
+    tinacms "^0.19.3"
 
 gatsby-plugin-typescript@^2.4.1, gatsby-plugin-typescript@^2.4.2:
   version "2.4.2"
@@ -15257,10 +15257,10 @@ react-test-renderer@^16.13.1:
     react-is "^16.8.6"
     scheduler "^0.19.1"
 
-react-tinacms-editor@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/react-tinacms-editor/-/react-tinacms-editor-0.5.2.tgz#e6c38ce877c3f45b5ce3965b4d7e7cca7b2599c2"
-  integrity sha512-e4CGmB9xQfoh3jzjiMcUqRaFZEW2RZSfUdKeTmKMW4cqA1l9GGMknAzZMwilAzKUnLflyGEAgD/1/1Us9TDcfw==
+react-tinacms-editor@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/react-tinacms-editor/-/react-tinacms-editor-0.5.3.tgz#02d622aaef4767fb8f23afd1868f8cc3dcb64dee"
+  integrity sha512-cJFI5C71uok/0fwPyJ3yXZnYbeh9fJkwj8RSGHWySjzlOzaM4UFAbdbI7We6TyIGOL3gAb8JrrQRQnMwb9UP2g==
   dependencies:
     "@tinacms/core" "^0.8.0"
     "@tinacms/fields" "^0.10.2"
@@ -17912,10 +17912,10 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
-tinacms@^0.19.1, tinacms@^0.19.2:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-0.19.2.tgz#ec37ef502e908818781564bc02a0c8df2f6ee37b"
-  integrity sha512-op2HhDQ55YI9zmjjgGu0I4vwsf1aiOPiPvUaQfeY2BpDv6YemQegeQjD+J+Zz7vpJOBOm1Sw6zv1NVK3b898Mg==
+tinacms@^0.19.1, tinacms@^0.19.3:
+  version "0.19.3"
+  resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-0.19.3.tgz#e4fa0b3d2406f5ecff974cee3509eb4de0ac6962"
+  integrity sha512-n7UACCo65djrJw0WVz8cWPazv/WQPrc+j+y+hVgzjDBWZTB1i4QFAHlw6bCikEeNmRJtzhxN/PFNF7ca9uFcaQ==
   dependencies:
     "@tinacms/alerts" "^0.1.3"
     "@tinacms/core" "^0.8.0"
@@ -17936,7 +17936,7 @@ tinacms@^0.19.1, tinacms@^0.19.2:
     lodash.merge "^4.6.2"
     moment ">=2 <=3"
     react-datetime "^2.16.3"
-    react-tinacms-editor "^0.5.2"
+    react-tinacms-editor "^0.5.3"
 
 tiny-invariant@^1.0.4, tiny-invariant@^1.0.6:
   version "1.1.0"

@@ -72,7 +72,7 @@
     "starstuff-components": "^2.1.11",
     "starstuff-style": "^1.1.2",
     "styled-components": "^5.1.0",
-    "tinacms": "^0.19.1",
+    "tinacms": "^0.19.3",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {

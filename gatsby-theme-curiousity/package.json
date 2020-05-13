@@ -58,7 +58,7 @@
     "gatsby-plugin-sharp": "^2.6.2",
     "gatsby-plugin-tinacms": "^0.1.37",
     "gatsby-plugin-typescript": "^2.4.1",
-    "gatsby-source-filesystem": "^2.3.1",
+    "gatsby-source-filesystem": "^2.3.3",
     "gatsby-tinacms-git": "^0.4.11",
     "gatsby-tinacms-remark": "^0.7.18",
     "gatsby-transformer-remark": "^2.8.7",

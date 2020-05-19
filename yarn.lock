@@ -7736,12 +7736,12 @@ gatsby-plugin-sharp@^2.6.6:
     svgo "1.3.2"
     uuid "^3.4.0"
 
-gatsby-plugin-tinacms@^0.1.37:
-  version "0.1.37"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.37.tgz#3c3af8c3e9f35232b3c03c0df2eeda03e392610f"
-  integrity sha512-oeGNSf4gf93LKeqHSOZGXl+Q4Yz0aPZmys4FPTa8P9HaoH1nWpMXeOx6RIUFbytyLHGS6bJJJDlr7aiL/GiAsg==
+gatsby-plugin-tinacms@^0.1.38:
+  version "0.1.38"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.1.38.tgz#dd14a4d2bab8b680db209083750bf441886fb15e"
+  integrity sha512-IMyMVt7qxlqQM0IARMDH2IdkxWcWyuQ+YZoo6KMgyIsRJ29pUVFfdLBkpjqfVSzRCEbM9CfzacgbmStXSYog1g==
   dependencies:
-    tinacms "^0.19.3"
+    tinacms "^0.19.4"
 
 gatsby-plugin-typescript@^2.4.1, gatsby-plugin-typescript@^2.4.2:
   version "2.4.2"
@@ -17787,7 +17787,7 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
-tinacms@^0.19.3, tinacms@^0.19.4:
+tinacms@^0.19.4:
   version "0.19.4"
   resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-0.19.4.tgz#0db9ba513a129107a2c7783da6c0ad7cc19d18c5"
   integrity sha512-RlTOsu58uv9Lxss+B/4Y762y/S+QrbmWW4wQ6GSdeEPJRO7Yd+OAxyYee5AFV0+FBKk5wLS63r7ALMx90/6+dg==

@@ -29,7 +29,7 @@
     "deepmerge": "^4.2.2",
     "eslint": "^7.2.0",
     "eslint-config-starstuff": "^1.4.42",
-    "gatsby": "^2.23.1",
+    "gatsby": "^2.23.3",
     "jest": "^25.5.4",
     "jest-emotion": "^10.0.32",
     "jest-preset-gatsby": "^1.0.59",
@@ -76,7 +76,7 @@
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "gatsby": "^2.23.1",
+    "gatsby": "^2.23.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

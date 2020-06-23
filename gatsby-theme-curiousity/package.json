@@ -68,7 +68,7 @@
     "react-helmet-async": "^1.0.6",
     "react-schemaorg": "^1.1.0",
     "schema-dts": "^0.6.0",
-    "slugify": "^1.4.0",
+    "slugify": "^1.4.2",
     "starstuff-components": "^2.1.15",
     "starstuff-style": "^1.1.2",
     "styled-components": "^5.1.1",

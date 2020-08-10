@@ -8223,10 +8223,10 @@ gatsby-telemetry@^1.3.14:
     stack-utils "1.0.2"
     uuid "3.4.0"
 
-gatsby-tinacms-git@^0.26.0:
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.26.0.tgz#68a33c5f1105136a6104c02e7e9a380c9d312a25"
-  integrity sha512-CPFVML74g7yrdfbjUgayIDpAvcTKfn0nHvMS5l5WVwFyCHaxh6rSJ8HzzzT1IzZE6W9L0Op/FVIf+wGpKMocXg==
+gatsby-tinacms-git@^0.27.1:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.27.1.tgz#a205f7f971cecae737fe1a71a2a6a6c164ec147a"
+  integrity sha512-B7KuYTg0HgARseUnOSKWhPOXohNBoMMyTzjcwG/Ou10zg8MCFSc9wZV+lNCjyzM//reD/KUtAA6esBvQq7LUjw==
   dependencies:
     "@tinacms/api-git" "^0.26.0"
     "@tinacms/git-client" "^0.26.0"

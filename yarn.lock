@@ -5800,6 +5800,15 @@ create-jest-runner@^0.6.0:
     jest-worker "^25.1.0"
     throat "^5.0.0"
 
+create-jest-runner@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/create-jest-runner/-/create-jest-runner-0.7.0.tgz#c5b438ab551fc727fda2db1828119a8b5c2408e2"
+  integrity sha512-lPG9GhfxrpcltKEls4/XsbkW6SEuzk9frCTC0SEA1ZVwk5XBYyxdmoqg/h7iKr9Nkq2uAg2Zcs+D4ZzUOuKabQ==
+  dependencies:
+    chalk "^4.1.0"
+    jest-worker "^26.3.0"
+    throat "^5.0.0"
+
 create-react-context@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.3.0.tgz#546dede9dc422def0d3fc2fe03afe0bc0f4f7d8c"
@@ -11378,13 +11387,13 @@ jest-runner-prettier@^0.3.6:
     create-jest-runner "^0.5.3"
     jest-diff "^24.8.0"
 
-jest-runner-stylelint@^2.3.6:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/jest-runner-stylelint/-/jest-runner-stylelint-2.3.6.tgz#1cc1c6cb5e8771d485016ec54ced7b61e66e2507"
-  integrity sha512-reifzGPvvSS/NH9JIuX/YQqPH8mM017q3e5flL1oNDbgYH7nNfrgnPBb0a0AtS30i+Jy8WxEvuOpfT70UiDcbg==
+jest-runner-stylelint@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/jest-runner-stylelint/-/jest-runner-stylelint-2.3.7.tgz#f03277ea5b42af32c17c2525468a9555084a3aa9"
+  integrity sha512-d181xo/+Pv0PyGZzaGdTDligVS/9EToaZ0M3SbqvkJfw8jo2fN9zKs2W7XpiMn50B/Xg0Fg9XWUJj3dIXcjbCQ==
   dependencies:
     cosmiconfig "^7.0.0"
-    create-jest-runner "^0.6.0"
+    create-jest-runner "^0.7.0"
 
 jest-runner@^25.5.4:
   version "25.5.4"
@@ -11560,6 +11569,15 @@ jest-worker@^26.0.0:
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.0.0.tgz#4920c7714f0a96c6412464718d0c58a3df3fb066"
   integrity sha512-pPaYa2+JnwmiZjK9x7p9BoZht+47ecFCDFA/CJxspHzeDvQcfVBLWzCiWyo+EGrSiQMWZtCFo9iSvMZnAAo8vw==
   dependencies:
+    merge-stream "^2.0.0"
+    supports-color "^7.0.0"
+
+jest-worker@^26.3.0:
+  version "26.3.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.3.0.tgz#7c8a97e4f4364b4f05ed8bca8ca0c24de091871f"
+  integrity sha512-Vmpn2F6IASefL+DVBhPzI2J9/GJUsqzomdeN+P+dK8/jKxbh8R3BtFnx3FIta7wYlPU62cpJMJQo4kuOowcMnw==
+  dependencies:
+    "@types/node" "*"
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 

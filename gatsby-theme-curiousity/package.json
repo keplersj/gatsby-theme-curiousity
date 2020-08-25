@@ -67,7 +67,7 @@
     "polished": "^3.6.5",
     "react-helmet-async": "^1.0.6",
     "react-schemaorg": "^1.2.0",
-    "schema-dts": "^0.7.0",
+    "schema-dts": "^0.7.1",
     "slugify": "^1.4.5",
     "starstuff-components": "^2.1.18",
     "starstuff-style": "^1.1.4",

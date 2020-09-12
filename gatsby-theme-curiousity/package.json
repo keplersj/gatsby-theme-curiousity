@@ -27,7 +27,7 @@
     "@types/jest": "^26.0.13",
     "@types/react-test-renderer": "^16.9.3",
     "deepmerge": "^4.2.2",
-    "eslint": "^7.8.1",
+    "eslint": "^7.9.0",
     "eslint-config-starstuff": "^1.4.42",
     "gatsby": "^2.24.57",
     "jest": "^25.5.4",

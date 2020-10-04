@@ -14828,13 +14828,6 @@ pnp-webpack-plugin@^1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-polished@^3.5.2:
-  version "3.6.7"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-3.6.7.tgz#44cbd0047f3187d83db0c479ef0c7d5583af5fb6"
-  integrity sha512-b4OViUOihwV0icb9PHmWbR+vPqaSzSAEbgLskvb7ANPATVXGiYv/TQFHQo65S53WU9i5EQ1I03YDOJW7K0bmYg==
-  dependencies:
-    "@babel/runtime" "^7.9.2"
-
 polished@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/polished/-/polished-4.0.1.tgz#7aa7075bd3e4745e4ac59f0279e91100a20c4bcb"
@@ -17895,13 +17888,13 @@ stackframe@^1.1.1:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.1.1.tgz#ffef0a3318b1b60c3b58564989aca5660729ec71"
   integrity sha512-0PlYhdKh6AfFxRyK/v+6/k+/mMfyiEBbTM5L94D0ZytQnJ166wuwoTYLHFWGbs2dpA8Rgq763KGWmN1EQEYHRQ==
 
-starstuff-components@^2.1.22:
-  version "2.1.22"
-  resolved "https://registry.yarnpkg.com/starstuff-components/-/starstuff-components-2.1.22.tgz#4cf59782465bbfd355bc88e515cbe404965a3f34"
-  integrity sha512-lGWVoJTZ612Ji8Q/qIeT5eYJuuLesTIg0W3JeoQ+N1zFtf0E+DGC+aCMb/j3v/S84xYnhNHIOwCoFCmA7le8og==
+starstuff-components@^2.1.23:
+  version "2.1.23"
+  resolved "https://registry.yarnpkg.com/starstuff-components/-/starstuff-components-2.1.23.tgz#64bcb587205ee6db726b02d32d869ab8a4435272"
+  integrity sha512-jRXC4zl0wLTyegBamyuAgbiOyhUQ/4H54SyFEloW8AuJP81I3tkH/2nQbTu0n7BhxYJg7Rjpgb0+FRYNlnMPLQ==
   dependencies:
     "@emotion/styled" "^10.0.27"
-    polished "^3.5.2"
+    polished "^4.0.1"
 
 starstuff-style@^1.1.5:
   version "1.1.5"

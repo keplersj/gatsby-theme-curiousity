@@ -64,7 +64,7 @@
     "gatsby-transformer-remark": "^2.8.38",
     "gatsby-transformer-sharp": "^2.5.17",
     "modern-normalize": "^1.0.0",
-    "polished": "^4.0.1",
+    "polished": "^4.0.2",
     "react-helmet-async": "^1.0.7",
     "react-schemaorg": "^1.2.0",
     "schema-dts": "^0.7.1",

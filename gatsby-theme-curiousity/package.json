@@ -41,7 +41,7 @@
     "jest-transform-stub": "^2.0.0",
     "prettier": "^2.1.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-test-renderer": "^16.14.0",
     "semantic-release": "^17.2.1",
     "stylelint": "^13.7.2",
@@ -78,7 +78,7 @@
   "peerDependencies": {
     "gatsby": "^2.24.78",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.14.0"
   },
   "stylelint": {
     "extends": [

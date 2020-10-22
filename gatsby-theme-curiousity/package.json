@@ -40,7 +40,7 @@
     "jest-serializer-react-helmet-async": "^1.0.6",
     "jest-transform-stub": "^2.0.0",
     "prettier": "^2.1.2",
-    "react": "^16.14.0",
+    "react": "^17.0.0",
     "react-dom": "^16.14.0",
     "react-test-renderer": "^17.0.0",
     "semantic-release": "^17.2.1",
@@ -77,7 +77,7 @@
   },
   "peerDependencies": {
     "gatsby": "^2.24.84",
-    "react": "^16.14.0",
+    "react": "^17.0.0",
     "react-dom": "^16.14.0"
   },
   "stylelint": {

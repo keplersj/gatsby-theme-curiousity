@@ -8401,15 +8401,15 @@ gatsby-tinacms-git@^0.32.0:
     "@tinacms/api-git" "^0.31.0"
     "@tinacms/git-client" "^0.32.0"
 
-gatsby-tinacms-remark@^0.32.0:
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.32.0.tgz#316ff6539e813a1f789e0a950e64554bdeebe004"
-  integrity sha512-ox4qwucP9fxpC7fag1kgdTq0wcKzB5c/abB1cvMCVgJB5b2AMQF9QbSVRl2gSbX9akY+dQa326eXpXoQP52wqA==
+gatsby-tinacms-remark@^0.32.1:
+  version "0.32.1"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-remark/-/gatsby-tinacms-remark-0.32.1.tgz#5106f90b1f2b71bf6f841c793c096628cdbd82a0"
+  integrity sha512-piRmr7KmrhxLF/2bQN2hkFRcX6Y324J+lCWBcWa9Sqt+i+9ukaU9rEURVuh/lqjze2Qb/ByfBejOBkjatxjnCA==
   dependencies:
     "@types/js-yaml" "^3.12.3"
     gray-matter "^4.0.2"
     js-yaml "^3.13.1"
-    react-tinacms-editor "^0.32.0"
+    react-tinacms-editor "^0.32.1"
     react-tinacms-inline "^0.32.0"
     slash "^3.0.0"
 
@@ -15652,10 +15652,10 @@ react-textarea-autosize@>=7.1:
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
 
-react-tinacms-editor@^0.32.0:
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/react-tinacms-editor/-/react-tinacms-editor-0.32.0.tgz#5f647c2f6e42913318cd5ddb2a6f82d5999e141c"
-  integrity sha512-awpOXwfLbdJj0WO+9p8NG3lscVcC4FhnWwSgj2iSoKRqtHiIlhET+9EKML6iDES+JeMO6XtGUC24ZsaIxtPgZw==
+react-tinacms-editor@^0.32.1:
+  version "0.32.1"
+  resolved "https://registry.yarnpkg.com/react-tinacms-editor/-/react-tinacms-editor-0.32.1.tgz#2d11e0feb89cec52d1b3686b3e94811c02d529ea"
+  integrity sha512-oq0WXFFOKg2pSz7J0DlGePblzMq7dh60zOre494SvWI4dm7rlpmrNJGq2MyKjq0slIstUQaVvTwPcenXsR+24Q==
   dependencies:
     codemirror "^5.42.2"
     lodash.debounce "^4.0.8"

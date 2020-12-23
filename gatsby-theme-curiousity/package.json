@@ -48,7 +48,7 @@
     "stylelint-config-starstuff": "^1.1.6"
   },
   "dependencies": {
-    "@emotion/core": "^10.1.1",
+    "@emotion/core": "^11.0.0",
     "@types/react": "^17.0.0",
     "@types/react-helmet": "^6.1.0",
     "gatsby-core-utils": "^1.7.1",

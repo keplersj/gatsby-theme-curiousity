@@ -17603,10 +17603,10 @@ starstuff-components@^2.1.35:
     "@emotion/styled" "^10.0.27"
     polished "^4.0.1"
 
-starstuff-style@^1.1.11:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/starstuff-style/-/starstuff-style-1.1.11.tgz#17452bf9e84443c856c4823fff0504a44c903fd2"
-  integrity sha512-gmaNYpNiVpJ4NzG0MR0pZy6z/ooKuINF7KmzwcIX0joq6hnO26zxlg1iO2+VfYXSIiYqxoPivERTj8sCjjXRow==
+starstuff-style@^1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/starstuff-style/-/starstuff-style-1.1.12.tgz#204650885e134e5d7e0c5549262422b04393eafb"
+  integrity sha512-vTPrHPvgL4CtGH95eBKQ+bfaNLM56AZwqoCQrfOBegRzw7Colyd9c+/J47gvn+jY3bblkSGqSA+x4jcURXc0cg==
 
 state-toggle@^1.0.0:
   version "1.0.3"

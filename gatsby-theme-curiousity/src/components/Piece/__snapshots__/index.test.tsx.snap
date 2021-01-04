@@ -36,104 +36,26 @@ exports[`Piece Page Component renders as expected 1`] = `
 `;
 
 exports[`Piece Page Component renders as expected 2`] = `
-.emotion-8 {
+.emotion-0 {
   max-width: 55em;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width:55em) {
-  .emotion-8 {
+@media (max-width: 55em) {
+  .emotion-0 {
     margin-left: 2em;
     margin-right: 2em;
   }
 }
 
-.emotion-7 {
+.emotion-1 {
   margin: 0.5em 0;
 }
 
-@media screen and (min-width:1024px) {
-  .emotion-7 {
-    margin: 0.5em;
-  }
-}
-
-.emotion-0 {
-  text-transform: uppercase;
-  margin-bottom: 1em;
-}
-
-@media screen and (max-width:1023px) {
-  .emotion-0:not(:last-child)::after {
-    content: " · ";
-  }
-}
-
-@media screen and (min-width:1024px) {
-  .emotion-0 {
-    position: relative;
-    padding: 0.3em 0.45em;
-    color: #000;
-  }
-
-  .emotion-0 a {
-    color: #000;
-  }
-
-  .emotion-0::before,
-  .emotion-0::after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: skew(20deg);
-    -ms-transform: skew(20deg);
-    transform: skew(20deg);
-    background-color: slategray;
-    z-index: -1;
-    content: "";
-    position: absolute;
-    white-space: nowrap;
-  }
-}
-
-.emotion-1 {
-  text-transform: uppercase;
-  margin-bottom: 1em;
-}
-
-@media screen and (max-width:1023px) {
-  .emotion-1:not(:last-child)::after {
-    content: " · ";
-  }
-}
-
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .emotion-1 {
-    position: relative;
-    padding: 0.3em 0.45em;
-    color: #fff;
-  }
-
-  .emotion-1 a {
-    color: #fff;
-  }
-
-  .emotion-1::before,
-  .emotion-1::after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: skew(20deg);
-    -ms-transform: skew(20deg);
-    transform: skew(20deg);
-    background-color: darkolivegreen;
-    z-index: -1;
-    content: "";
-    position: absolute;
-    white-space: nowrap;
+    margin: 0.5em;
   }
 }
 
@@ -142,21 +64,21 @@ exports[`Piece Page Component renders as expected 2`] = `
   margin-bottom: 1em;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .emotion-2:not(:last-child)::after {
     content: " · ";
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .emotion-2 {
     position: relative;
     padding: 0.3em 0.45em;
-    color: #fff;
+    color: #000;
   }
 
   .emotion-2 a {
-    color: #fff;
+    color: #000;
   }
 
   .emotion-2::before,
@@ -166,9 +88,10 @@ exports[`Piece Page Component renders as expected 2`] = `
     width: 100%;
     height: 100%;
     -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
     -ms-transform: skew(20deg);
     transform: skew(20deg);
-    background-color: maroon;
+    background-color: slategray;
     z-index: -1;
     content: "";
     position: absolute;
@@ -181,21 +104,21 @@ exports[`Piece Page Component renders as expected 2`] = `
   margin-bottom: 1em;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .emotion-3:not(:last-child)::after {
     content: " · ";
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .emotion-3 {
     position: relative;
     padding: 0.3em 0.45em;
-    color: #000;
+    color: #fff;
   }
 
   .emotion-3 a {
-    color: #000;
+    color: #fff;
   }
 
   .emotion-3::before,
@@ -205,9 +128,10 @@ exports[`Piece Page Component renders as expected 2`] = `
     width: 100%;
     height: 100%;
     -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
     -ms-transform: skew(20deg);
     transform: skew(20deg);
-    background-color: #3d7e9a;
+    background-color: darkolivegreen;
     z-index: -1;
     content: "";
     position: absolute;
@@ -220,13 +144,13 @@ exports[`Piece Page Component renders as expected 2`] = `
   margin-bottom: 1em;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .emotion-4:not(:last-child)::after {
     content: " · ";
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .emotion-4 {
     position: relative;
     padding: 0.3em 0.45em;
@@ -244,9 +168,10 @@ exports[`Piece Page Component renders as expected 2`] = `
     width: 100%;
     height: 100%;
     -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
     -ms-transform: skew(20deg);
     transform: skew(20deg);
-    background-color: #24292e;
+    background-color: maroon;
     z-index: -1;
     content: "";
     position: absolute;
@@ -259,21 +184,21 @@ exports[`Piece Page Component renders as expected 2`] = `
   margin-bottom: 1em;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .emotion-5:not(:last-child)::after {
     content: " · ";
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .emotion-5 {
     position: relative;
     padding: 0.3em 0.45em;
-    color: #fff;
+    color: #000;
   }
 
   .emotion-5 a {
-    color: #fff;
+    color: #000;
   }
 
   .emotion-5::before,
@@ -283,9 +208,10 @@ exports[`Piece Page Component renders as expected 2`] = `
     width: 100%;
     height: 100%;
     -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
     -ms-transform: skew(20deg);
     transform: skew(20deg);
-    background-color: #C12127;
+    background-color: #3d7e9a;
     z-index: -1;
     content: "";
     position: absolute;
@@ -298,21 +224,21 @@ exports[`Piece Page Component renders as expected 2`] = `
   margin-bottom: 1em;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .emotion-6:not(:last-child)::after {
     content: " · ";
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .emotion-6 {
     position: relative;
     padding: 0.3em 0.45em;
-    color: #000;
+    color: #fff;
   }
 
   .emotion-6 a {
-    color: #000;
+    color: #fff;
   }
 
   .emotion-6::before,
@@ -322,6 +248,87 @@ exports[`Piece Page Component renders as expected 2`] = `
     width: 100%;
     height: 100%;
     -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: #24292e;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-7 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1023px) {
+  .emotion-7:not(:last-child)::after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .emotion-7 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #fff;
+  }
+
+  .emotion-7 a {
+    color: #fff;
+  }
+
+  .emotion-7::before,
+  .emotion-7::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    background-color: #C12127;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+.emotion-8 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1023px) {
+  .emotion-8:not(:last-child)::after {
+    content: " · ";
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .emotion-8 {
+    position: relative;
+    padding: 0.3em 0.45em;
+    color: #000;
+  }
+
+  .emotion-8 a {
+    color: #000;
+  }
+
+  .emotion-8::before,
+  .emotion-8::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
     -ms-transform: skew(20deg);
     transform: skew(20deg);
     background-color: #e9573f;
@@ -334,7 +341,7 @@ exports[`Piece Page Component renders as expected 2`] = `
 
 <main>
   <article
-    className="emotion-8"
+    className="emotion-0"
   >
     <script
       type="application/ld+json"
@@ -354,10 +361,10 @@ exports[`Piece Page Component renders as expected 2`] = `
         Test Piece
       </h1>
       <div
-        className="emotion-7"
+        className="emotion-1"
       >
         <span
-          className="emotion-0"
+          className="emotion-2"
           list={
             Array [
               "Test",
@@ -371,7 +378,7 @@ exports[`Piece Page Component renders as expected 2`] = `
           ​​
         </span>
         <span
-          className="emotion-1"
+          className="emotion-3"
           list={
             Array [
               "Test",
@@ -385,7 +392,7 @@ exports[`Piece Page Component renders as expected 2`] = `
           ​​
         </span>
         <span
-          className="emotion-2"
+          className="emotion-4"
           list={
             Array [
               "Test",
@@ -399,7 +406,7 @@ exports[`Piece Page Component renders as expected 2`] = `
           ​​
         </span>
         <span
-          className="emotion-3"
+          className="emotion-5"
           name="Homepage"
         >
           <a
@@ -410,7 +417,7 @@ exports[`Piece Page Component renders as expected 2`] = `
           ​​
         </span>
         <span
-          className="emotion-4"
+          className="emotion-6"
           name="GitHub"
         >
           <a
@@ -421,7 +428,7 @@ exports[`Piece Page Component renders as expected 2`] = `
           ​​
         </span>
         <span
-          className="emotion-5"
+          className="emotion-7"
           name="npm"
         >
           <a
@@ -432,7 +439,7 @@ exports[`Piece Page Component renders as expected 2`] = `
           ​​
         </span>
         <span
-          className="emotion-6"
+          className="emotion-8"
           name="RubyGems"
         >
           <a

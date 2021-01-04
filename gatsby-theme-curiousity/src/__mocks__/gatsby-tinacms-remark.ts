@@ -1,4 +1,4 @@
-const gatsbyTinaCMSRemark = require.requireActual("gatsby-tinacms-remark");
+const gatsbyTinaCMSRemark = jest.requireActual("gatsby-tinacms-remark");
 
 export const remarkForm = jest
   .fn()
@@ -6,7 +6,7 @@ export const remarkForm = jest
 
 export const RemarkCreatorPlugin = gatsbyTinaCMSRemark.RemarkCreatorPlugin;
 
-const initialDataInHook = <T>(initialData: T): [T] => [initialData];
+const initialDataInHook = (initialData: any): any => [initialData];
 
 export const useLocalRemarkForm = jest.fn(initialDataInHook);
 

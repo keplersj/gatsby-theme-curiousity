@@ -52,7 +52,7 @@
     "@emotion/styled": "^11.0.0",
     "@types/react": "^17.0.0",
     "@types/react-helmet": "^6.1.0",
-    "gatsby-core-utils": "^1.7.1",
+    "gatsby-core-utils": "^1.8.0",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-emotion": "^5.1.0",
     "gatsby-plugin-react-helmet-async": "^1.1.0",

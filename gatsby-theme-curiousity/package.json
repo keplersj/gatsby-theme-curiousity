@@ -50,7 +50,7 @@
   "dependencies": {
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.1",
     "@types/react-helmet": "^6.1.0",
     "gatsby-core-utils": "^1.10.0",
     "gatsby-image": "^2.11.0",

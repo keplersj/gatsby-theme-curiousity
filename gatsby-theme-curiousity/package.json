@@ -61,7 +61,7 @@
     "gatsby-plugin-typescript": "^2.12.1",
     "gatsby-source-filesystem": "^3.1.0",
     "gatsby-tinacms-git": "^0.39.0",
-    "gatsby-tinacms-remark": "^0.38.0",
+    "gatsby-tinacms-remark": "^0.39.0",
     "gatsby-transformer-remark": "^3.1.0",
     "gatsby-transformer-sharp": "^3.1.0",
     "modern-normalize": "^1.0.0",

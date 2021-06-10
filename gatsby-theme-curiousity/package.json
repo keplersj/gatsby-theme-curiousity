@@ -58,7 +58,7 @@
     "gatsby-plugin-react-helmet-async": "^1.2.0",
     "gatsby-plugin-sharp": "^3.7.1",
     "gatsby-plugin-tinacms": "^0.37.0",
-    "gatsby-plugin-typescript": "^3.7.0",
+    "gatsby-plugin-typescript": "^3.7.1",
     "gatsby-source-filesystem": "^3.7.1",
     "gatsby-tinacms-git": "^0.41.0",
     "gatsby-tinacms-remark": "^0.41.0",

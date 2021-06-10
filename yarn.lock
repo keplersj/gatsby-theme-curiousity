@@ -8537,7 +8537,7 @@ gatsby-core-utils@^1.10.1:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^2.0.0, gatsby-core-utils@^2.6.0, gatsby-core-utils@^2.7.0:
+gatsby-core-utils@^2.0.0, gatsby-core-utils@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-2.7.0.tgz#b73a152920c8459af35412c49f9ec0df67c70fe6"
   integrity sha512-0yma1pr5bNAR4rnd4E+3sct+Fr+wjfWoz5dRQCE5Swb1vZ1b6l7QW4KxTPQhwNgbI+tgYakJhp+pgxPLFpXxHA==
@@ -11579,10 +11579,10 @@ jest-serializer-json-ld-script@^1.0.7:
   resolved "https://registry.yarnpkg.com/jest-serializer-json-ld-script/-/jest-serializer-json-ld-script-1.0.7.tgz#cdaadd8f47700c133d900140f648d89800e00cfc"
   integrity sha512-CHjMASrhTAXxTCAwgY4wp2/8L5zdH2tRfkUbAOviXxPxxfO/Ez90v5sCQvwukumGzAoX5ORWS5Tx1icht8bgIQ==
 
-jest-serializer-react-helmet-async@^1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/jest-serializer-react-helmet-async/-/jest-serializer-react-helmet-async-1.0.18.tgz#952794d79bf1142694ebf86ecf8f816b233bb5b3"
-  integrity sha512-FRPZZrZbnr1wWKhO2MKMYIMduzfKthN4ydjyo27u4e4iCktRsTx0mCNwGeA93dlQQxWfGSuBy5GXuiqjv0bJEw==
+jest-serializer-react-helmet-async@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/jest-serializer-react-helmet-async/-/jest-serializer-react-helmet-async-1.0.19.tgz#c41921327eae06be26e76b391d10bc4b30f0b262"
+  integrity sha512-RrBi9S/+UELOfCH04RB2Krm71jzOOsHmoUfm8AU4BEnQKQbDTsoHQfIRDAzlkMuUw2otyO8KfsvG0yUYYPlJxw==
 
 jest-serializer@^26.6.2:
   version "26.6.2"

@@ -2656,10 +2656,10 @@
     final-form "4.18 - 4.19"
     final-form-arrays "^3.0.1"
 
-"@tinacms/git-client@^0.39.0":
-  version "0.39.0"
-  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.39.0.tgz#794c4e1d91d9d9ec6eccd3c649742511f362a211"
-  integrity sha512-R2AtxcO/aH06R5z12nWxYuNieSGDf0lIWxgPcQ+UflkgqEL2/TmEHHSe6GVlH7GJ74ALg0zq1PZpaRdlJCz00A==
+"@tinacms/git-client@^0.42.0":
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.42.0.tgz#eba3c5f9a14b91f171de6bd07ce878fb7d9e34ce"
+  integrity sha512-W6InQ0PytZiXjg6xZ2ZwaGQaR7Z2JaH1NsI9gzGRELthCumk0yEowmZMont/8wv/m4Mg2iES86y8NjpK79pajg==
 
 "@tinacms/icons@^0.36.0":
   version "0.36.0"
@@ -8846,13 +8846,13 @@ gatsby-telemetry@^2.8.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-tinacms-git@^0.41.1:
-  version "0.41.1"
-  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.41.1.tgz#30a13faaf021b96da0d04c5b416cde576413a21c"
-  integrity sha512-E0DQb8Cwl/MjLykE3mT1hwDU++QYxKrw/oI+/0knUY+loY8V7+2DOOMX7zG3bLcxzHyTUG91VEFdEV562ovXtg==
+gatsby-tinacms-git@^0.42.0:
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/gatsby-tinacms-git/-/gatsby-tinacms-git-0.42.0.tgz#876e5fbc3d83d54676ec365ac994f7e02441b65b"
+  integrity sha512-OUCP8I8+BzHMS+GZst0dzn37eGv9La0mpW4RggUBf5kFrxGKKU8zkuGAptqUkg8dIt5fJ7HQl65tvupaTqTRFw==
   dependencies:
     "@tinacms/api-git" "^0.39.0"
-    "@tinacms/git-client" "^0.39.0"
+    "@tinacms/git-client" "^0.42.0"
 
 gatsby-tinacms-remark@^0.41.1:
   version "0.41.1"

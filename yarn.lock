@@ -8601,10 +8601,10 @@ gatsby-core-utils@^1.10.1:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^2.0.0, gatsby-core-utils@^2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-2.9.0.tgz#f1ba30dfa687bdd2c1c5106d29e6491e5376e8c5"
-  integrity sha512-LKmkk4B/VnSEYKR9W/C8Lp9lwk/l/qY5jbsoiChc43F67VM667gITWH0noSUdcGzbEsN8xi0Wuc8dMA6BvKkvg==
+gatsby-core-utils@^2.0.0, gatsby-core-utils@^2.10.0, gatsby-core-utils@^2.9.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-2.10.0.tgz#bc37ea9eb6bb5f327aa4bdc0345a37d9390d4a7a"
+  integrity sha512-xvVebKSrjHkZQQkeEjuAekCAg17KT2l44d/yn7w2dzBGay244m8hoY8LRtLRdsrSp30ix89QklefuP9frEfhbA==
   dependencies:
     ci-info "2.0.0"
     configstore "^5.0.1"

@@ -2630,6 +2630,11 @@
   resolved "https://registry.yarnpkg.com/@tinacms/alerts/-/alerts-0.33.0.tgz#2dbf40b04d560848e1ecbd85c0fe77ca4ddab56d"
   integrity sha512-TPfJxX8u17knuThmgWMu7e9NbITroHg8W135sC0G1oKAsxo2cfezhe7Iy7hm/fQsRWmLleZ+Ygnc/tJn5RqSEg==
 
+"@tinacms/alerts@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/alerts/-/alerts-0.43.0.tgz#84bda17ad6054d25f2b9e92a2630db1f24897a50"
+  integrity sha512-nc43vK8/8PPQtTbSElyGlQUKJH5mhb0xj92XubN2aPWpTVz/fIdQKLaQw8rE1jrmE6q5QRMeheq0LeMpT9rUHg==
+
 "@tinacms/api-git@^0.42.1":
   version "0.42.1"
   resolved "https://registry.yarnpkg.com/@tinacms/api-git/-/api-git-0.42.1.tgz#2705acbbf9c155390dd173d01802e983ecff51e9"
@@ -2646,6 +2651,11 @@
   resolved "https://registry.yarnpkg.com/@tinacms/core/-/core-0.33.0.tgz#e901b1050903f2825cf68d680a017d35b99231a4"
   integrity sha512-Wa6r5MUk4NQs7Moa4MlO2uwNk37Y5GeY8EQwtihkFACEh0vgfb0XYx34ZxAV5l945XQ//OYhCIY+pc3WgN8aKw==
 
+"@tinacms/core@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/core/-/core-0.43.0.tgz#e4d1c6dc8dd48a618fff4b5fe97ee1bad82ad055"
+  integrity sha512-I0aW4fR2e7KneSPYXfoEJO9lSf7/ZkL97pEliD/mC+VdFpm4i+EtmoyvVNYcXGBMOEFT7mZy8BSDVWcgUQapzA==
+
 "@tinacms/fields@^0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@tinacms/fields/-/fields-0.37.0.tgz#4ee1597b8b281cfed5d952826f3385b296f81922"
@@ -2658,6 +2668,20 @@
     react-dismissible "^1.3.0"
     react-dropzone "10.1.8"
 
+"@tinacms/fields@^0.43.3":
+  version "0.43.3"
+  resolved "https://registry.yarnpkg.com/@tinacms/fields/-/fields-0.43.3.tgz#a88fd5ee0f5af1d9296defc8332bf5a301cd8ed7"
+  integrity sha512-xGGI7gmHb2Ofj4zq6uKWNwX/ZcXOh7JR8Y/J96EufVvtxshcL+tZiUH5EM0VU9cZb3eqG1zPmCAQhsK59iI6vw==
+  dependencies:
+    "@sambego/storybook-styles" "^1.0.0"
+    "@types/react-select" "^2.0.11"
+    color-string "^1.5.3"
+    moment ">=2 <=3"
+    react-color "^2.17.3"
+    react-datetime "^2.16.3"
+    react-dismissible "^1.3.0"
+    react-dropzone "10.1.8"
+
 "@tinacms/form-builder@^0.34.0":
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@tinacms/form-builder/-/form-builder-0.34.0.tgz#0fd39dfe6796907818ebd8a38bd07694cda97737"
@@ -2667,12 +2691,32 @@
     "@tinacms/react-core" "^0.34.0"
     react-final-form "^6.3.0"
 
+"@tinacms/form-builder@^0.43.3":
+  version "0.43.3"
+  resolved "https://registry.yarnpkg.com/@tinacms/form-builder/-/form-builder-0.43.3.tgz#ae96dd6ac0331033cc1cee821b5a041553bdfe47"
+  integrity sha512-QpSxhO6rQFzM/y7cc56DBdOB6WynzlJpNd1ls61cxeJGPeVz4LZg0f96RxClSi67LG9gmPbJ6MXfZFsO6F85cQ==
+  dependencies:
+    "@tinacms/forms" "^0.43.0"
+    "@tinacms/icons" "^0.42.1"
+    "@tinacms/react-core" "^0.43.0"
+    "@tinacms/react-modals" "^0.43.0"
+    "@tinacms/styles" "^0.42.1"
+    react-final-form "^6.3.0"
+
 "@tinacms/forms@^0.33.0":
   version "0.33.0"
   resolved "https://registry.yarnpkg.com/@tinacms/forms/-/forms-0.33.0.tgz#5a71e98415cb1c3e18bdb8a9aae87b36167fa4b9"
   integrity sha512-qw9XWZOgpktj+YIZ3xaEakFgEbP1yCMlD4b1bEE5zAj3aMCyTqwtV37WbHtaqNSXiD5Yzf35JgI11nlAPFwQcA==
   dependencies:
     final-form "4.18 - 4.19"
+    final-form-arrays "^3.0.1"
+
+"@tinacms/forms@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/forms/-/forms-0.43.0.tgz#2b1db2213f8085db576965cd78827e662b21bba2"
+  integrity sha512-VF/1Qz5Tp1SgbjSSoZtAhOMFO69x1XWob/FUlFgs7ajH8ptKFSqPApVF7Tgg8HB7sE/bAzK8mqduxG8Gec+jpA==
+  dependencies:
+    final-form "^4.20.2"
     final-form-arrays "^3.0.1"
 
 "@tinacms/git-client@^0.43.0":
@@ -2685,10 +2729,20 @@
   resolved "https://registry.yarnpkg.com/@tinacms/icons/-/icons-0.36.0.tgz#f184d19dafd0785a711db12bb4db88903f628abb"
   integrity sha512-xZDZj5oMH3Sy8T730jp7I+Ab355hDEIeaufiY4lSt0fwvspZEG2k1lKcGb0qTT9hX0jPj48am8e7fhQ985kcMQ==
 
+"@tinacms/icons@^0.42.1":
+  version "0.42.1"
+  resolved "https://registry.yarnpkg.com/@tinacms/icons/-/icons-0.42.1.tgz#cd762f8855394078b17a0d30ccb54f4ce1eb0d73"
+  integrity sha512-rKXJMQmYTs6gZFI72oZ4PyO5qFxhDRZfjRkcVGb7u9g0Av8gtsdNUVcdDtbESjfOSoX4eWMnViXrhfTYrLmBvw==
+
 "@tinacms/react-alerts@^0.36.0":
   version "0.36.0"
   resolved "https://registry.yarnpkg.com/@tinacms/react-alerts/-/react-alerts-0.36.0.tgz#43265ed4ef5eab0532552e60d0d591d8f221e6b0"
   integrity sha512-x8mGRMg2CIZmx3eSxuH9mZgY8yk1lsIcdNCoIbLHtzIAJni8z/+qxE8YcpUjOYH/na5Va5x1SrplWvrFYXuxwg==
+
+"@tinacms/react-alerts@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/react-alerts/-/react-alerts-0.43.0.tgz#7392d305a43f9484c6651e8699c4edeabcfd371e"
+  integrity sha512-WmCBLSV6deHjIud8pdVvIqV8RiRW/e+0ZDIJDEX1sGrXnQzfs/QlQGOKMh/UMtH4xYgyyR1nEZ/Gus9V0+PfoQ==
 
 "@tinacms/react-core@^0.34.0":
   version "0.34.0"
@@ -2697,6 +2751,14 @@
   dependencies:
     "@tinacms/core" "^0.33.0"
     "@tinacms/forms" "^0.33.0"
+
+"@tinacms/react-core@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/react-core/-/react-core-0.43.0.tgz#e1b6a6b95c0a4c556f81178d6e1fc3a95b99da76"
+  integrity sha512-oDD+tgDPHj51zd4XdBNtokxMIAPPQrOVfMZU1aSWry4jfjBk8INjCeA6PDGeZYdBGI3uGiZniHfdzN1okfRWIQ==
+  dependencies:
+    "@tinacms/core" "^0.43.0"
+    "@tinacms/forms" "^0.43.0"
 
 "@tinacms/react-forms@^0.36.0":
   version "0.36.0"
@@ -2707,15 +2769,34 @@
     react-beautiful-dnd "^11.0.5"
     react-dismissible "^1.3.0"
 
+"@tinacms/react-forms@^0.43.3":
+  version "0.43.3"
+  resolved "https://registry.yarnpkg.com/@tinacms/react-forms/-/react-forms-0.43.3.tgz#19d56d9c5a7af97897493b6ff9b6d89acc759651"
+  integrity sha512-PJHGsnDbwP+rpffRKL16ldY5C0QZcwFcrZdSVaqZruFnaXKuhqjM/wc9v1Y12qFfkGIredTzApW5YhXYTcfHsg==
+  dependencies:
+    "@tinacms/form-builder" "^0.43.3"
+    react-beautiful-dnd "^11.0.5"
+    react-dismissible "^1.3.0"
+
 "@tinacms/react-modals@^0.36.0":
   version "0.36.0"
   resolved "https://registry.yarnpkg.com/@tinacms/react-modals/-/react-modals-0.36.0.tgz#5829b0bf1a49bdbd2f99cc784602f3b1fb09897c"
   integrity sha512-+tvUXcShMYGhXWJZgxzlL1NdLqR/KS6/97bPaNjgxs0xIF3EY99lbB5X8lgOuL1zPGW86lQ4Z7+XphKa6hPOhg==
 
+"@tinacms/react-modals@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/react-modals/-/react-modals-0.43.0.tgz#b6af0903b7f5d1742ac52b5201665b7d2fac1e97"
+  integrity sha512-3Etzi2nvbH5rkV1vUbyQNVug7HPgSOw7+pLuiToafR2dsB14ZLxYo8QvcQN0A56jzqum/1RLMlOsmugkeFs3qw==
+
 "@tinacms/react-screens@^0.36.0":
   version "0.36.0"
   resolved "https://registry.yarnpkg.com/@tinacms/react-screens/-/react-screens-0.36.0.tgz#5bb374c7fc5588bbd6e2fdabf5369d716f21dc82"
   integrity sha512-HgHBNtnCARBXuCZ3mFMKc8O0E6+hHQTs9iJdmaLcjb41+A6BXB9SMSwHprA+lzEPgjnwZBTmrnES9PYqlwhRPA==
+
+"@tinacms/react-screens@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@tinacms/react-screens/-/react-screens-0.43.0.tgz#fcf260cf4d9de16cd0248128748a55ec6e51a91f"
+  integrity sha512-JqPMu2Mwl+g4hTUqN1PbjrJlnujtKN8w3feF7iUDmvWoY5RZk6CUco2JzyXXFtUpFvDIc9OYwGRyT+o3+WcfNg==
 
 "@tinacms/react-sidebar@^0.36.1":
   version "0.36.1"
@@ -2724,6 +2805,15 @@
   dependencies:
     "@tinacms/core" "^0.33.0"
     "@tinacms/forms" "^0.33.0"
+    react-dismissible "^1.3.0"
+
+"@tinacms/react-sidebar@^0.43.3":
+  version "0.43.3"
+  resolved "https://registry.yarnpkg.com/@tinacms/react-sidebar/-/react-sidebar-0.43.3.tgz#fb79e94b5fa98765e6fdb2e10f89413abc1b78fc"
+  integrity sha512-omIfrWKITuH5I50lQyHtlnrDGMVXivPLPaqVIjVw/WnDadfAz0kTXzz8dGn1Ic5lSZLXhuqCkULEUjEaF26LVQ==
+  dependencies:
+    "@tinacms/core" "^0.43.0"
+    "@tinacms/forms" "^0.43.0"
     react-dismissible "^1.3.0"
 
 "@tinacms/react-toolbar@^0.37.0":
@@ -2736,10 +2826,27 @@
     "@tinacms/forms" "^0.33.0"
     react-dismissible "^1.3.0"
 
+"@tinacms/react-toolbar@^0.43.3":
+  version "0.43.3"
+  resolved "https://registry.yarnpkg.com/@tinacms/react-toolbar/-/react-toolbar-0.43.3.tgz#0bcd973e8e0120182af039cd58085ba0d178add4"
+  integrity sha512-xSBEJbn/ZwoAqKzqc4C1HEMcijni6PhSg9rz9bm0E6NTXsiEBY/Ui5Iu8z/CvTjIBDyXW2L+f+4V2UKBlMrcsQ==
+  dependencies:
+    "@tinacms/core" "^0.43.0"
+    "@tinacms/fields" "^0.43.3"
+    "@tinacms/forms" "^0.43.0"
+    react-dismissible "^1.3.0"
+
 "@tinacms/styles@^0.33.0":
   version "0.33.0"
   resolved "https://registry.yarnpkg.com/@tinacms/styles/-/styles-0.33.0.tgz#a6cb7debe318e3b832f6a2ce5f905223462698dd"
   integrity sha512-QcX8p6NkFa0OfbdEJfY18BkKUId6fIlyAELkgZGhqXRKRTfXVqiBEdZVr3itmyRhFRnRByzjyNXNV2H4hrNTxQ==
+  dependencies:
+    webfontloader "^1.6.28"
+
+"@tinacms/styles@^0.42.1":
+  version "0.42.1"
+  resolved "https://registry.yarnpkg.com/@tinacms/styles/-/styles-0.42.1.tgz#ec79a10e7164025a57b45623c699c8a37dbf6f9a"
+  integrity sha512-+80A6cMohj+MDnCqsy9/klnbVrWj9v8jAv0kQ8c/vGfFq5s2kaKCP4B+S6/qEdjuz3R3GMD9Y0boShVjMKpzDw==
   dependencies:
     webfontloader "^1.6.28"
 
@@ -5875,6 +5982,14 @@ create-jest-runner@^0.7.0:
     jest-worker "^26.3.0"
     throat "^5.0.0"
 
+create-react-class@^15.5.2:
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.7.0.tgz#7499d7ca2e69bb51d13faf59bd04f0c65a1d6c1e"
+  integrity sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==
+  dependencies:
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 create-react-context@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.3.0.tgz#546dede9dc422def0d3fc2fe03afe0bc0f4f7d8c"
@@ -8212,6 +8327,13 @@ final-form-arrays@^3.0.1:
   dependencies:
     "@babel/runtime" "^7.8.3"
 
+final-form@^4.20.2:
+  version "4.20.2"
+  resolved "https://registry.yarnpkg.com/final-form/-/final-form-4.20.2.tgz#c820b37d7ebb73d71169480256a36c7e6e6c9155"
+  integrity sha512-5i0IxqwjjPG1nUNCjWhqPCvQJJ2R+QwTwaAnjPmFnLbyjIHWuBPU8u+Ps4G3TcX2Sjno+O5xCZJzYcMJEzzfCQ==
+  dependencies:
+    "@babel/runtime" "^7.10.0"
+
 finalhandler@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.1.2.tgz#b7e7d000ffd11938d0fdb053506f6ebabe9f587d"
@@ -8697,12 +8819,12 @@ gatsby-plugin-sharp@^3.10.2:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-tinacms@^0.37.0:
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.37.0.tgz#905a94e225b0687dc6fa1a53cabad35810999a35"
-  integrity sha512-g9QeXMNL/1OQ2+jIAylwnRzTXiAx1iXHJOgSZLgQjVPOI0Gw7ETMDEC4c8/iBxhbmhOxumrMIvaSWlhn5ZgqfQ==
+gatsby-plugin-tinacms@^0.43.3:
+  version "0.43.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-tinacms/-/gatsby-plugin-tinacms-0.43.3.tgz#f1859b4f673a81f6137d6721b4faebd7b8329d5c"
+  integrity sha512-07lekj12cONPtv+zX6PghIKdcquDUNQF910iinIqXZij0c/RvQNm23KGIfNJzW8pDH2QFjAF978mMRLTIiaHFw==
   dependencies:
-    tinacms "^0.37.0"
+    tinacms "^0.43.3"
 
 gatsby-plugin-typescript@^2.12.1:
   version "2.12.1"
@@ -12539,7 +12661,7 @@ longest@^1.0.0:
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
   integrity sha1-MKCy2jj3N3DoKUoNIuZiXtd9AJc=
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -13398,6 +13520,11 @@ modify-values@^1.0.0:
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.1.tgz#b3939fa605546474e3e3e3c63d64bd43b4ee6022"
   integrity sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==
 
+"moment@>=2 <=3":
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+
 moment@^2.27.0:
   version "2.27.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
@@ -14123,6 +14250,11 @@ oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
+
+object-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
+  integrity sha1-m+3VygiXlJvKR+f/QIBi1Un1h/I=
 
 object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
@@ -15754,7 +15886,7 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@^15.5.10, prop-types@^15.6.1, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.7, prop-types@^15.6.1, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -16153,6 +16285,16 @@ react-color@^2.17.3:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
+react-datetime@^2.16.3:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.16.3.tgz#7f9ac7d4014a939c11c761d0c22d1fb506cb505e"
+  integrity sha512-amWfb5iGEiyqjLmqCLlPpu2oN415jK8wX1qoTq7qn6EYiU7qQgbNHglww014PT4O/3G5eo/3kbJu/M/IxxTyGw==
+  dependencies:
+    create-react-class "^15.5.2"
+    object-assign "^3.0.0"
+    prop-types "^15.5.7"
+    react-onclickoutside "^6.5.0"
+
 react-dev-utils@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -16266,6 +16408,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-onclickoutside@^6.5.0:
+  version "6.11.2"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.11.2.tgz#790e2100b9a3589eefca1404ecbf0476b81b7928"
+  integrity sha512-640486eSwU/t5iD6yeTlefma8dI3bxPXD93hM9JGKyYITAd0P1JFkkcDeyHZRqNpY/fv1YW0Fad9BXr44OY8wQ==
 
 react-redux@^7.0.3:
   version "7.2.0"
@@ -19156,6 +19303,27 @@ tinacms@^0.37.0:
     "@tinacms/react-sidebar" "^0.36.1"
     "@tinacms/react-toolbar" "^0.37.0"
     "@tinacms/styles" "^0.33.0"
+    react-dropzone "^11.1.0"
+
+tinacms@^0.43.3:
+  version "0.43.3"
+  resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-0.43.3.tgz#67decee3829f6a431ce580910d030632b5b92c8a"
+  integrity sha512-wBmu/t0Ks/EwkBzqXZRDjcSI9vFHnYdgD/9ONKqOYKFdSBQAQgph8Mu4gox/3/xM0ADTlD1x58VMAp41R0Zzzw==
+  dependencies:
+    "@tinacms/alerts" "^0.43.0"
+    "@tinacms/core" "^0.43.0"
+    "@tinacms/fields" "^0.43.3"
+    "@tinacms/form-builder" "^0.43.3"
+    "@tinacms/forms" "^0.43.0"
+    "@tinacms/icons" "^0.42.1"
+    "@tinacms/react-alerts" "^0.43.0"
+    "@tinacms/react-core" "^0.43.0"
+    "@tinacms/react-forms" "^0.43.3"
+    "@tinacms/react-modals" "^0.43.0"
+    "@tinacms/react-screens" "^0.43.0"
+    "@tinacms/react-sidebar" "^0.43.3"
+    "@tinacms/react-toolbar" "^0.43.3"
+    "@tinacms/styles" "^0.42.1"
     react-dropzone "^11.1.0"
 
 tiny-invariant@^1.0.4, tiny-invariant@^1.0.6:
